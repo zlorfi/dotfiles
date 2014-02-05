@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="./styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="./style.css" /> 
+    <link type="text/css" rel="stylesheet" href="./styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="./scripts/shCore.js"></script> 
+    <script type="text/javascript" src="./scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="./scripts/shBrushJava.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script> 
+  </head>
+  <body>
+<h1 id="toc_1">RegEXP</h1>
+
+<h2 id="toc_1.1">Password policy</h2>
+
+<p>
+at least
+</p>
+<ul>
+<li>
+lower-case alphabetic character: [a-z]
+</li>
+<li>
+upper-case alphabetic character: [A-Z]
+</li>
+<li>
+decimal digit: [0-9]
+</li>
+<li>
+one of !"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~
+</li>
+</ul>
+
+<p>
+and 8 chars long
+</p>
+
+<pre class="brush: bash; toolbar: false;">
+    (?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\\p{Punct})\\p{Graph}{8}
+</pre>
+    
+
+<p>
+Example:
+</p>
+
+<pre class="brush: java; toolbar: false;">
+    import java.sql.SQLException;
+    import java.util.regex.Pattern;
+    import java.util.regex.Matcher;
+
+    public class reg {
+
+        /**
+        * @param args
+        * @throws SQLException
+        * @throws ClassNotFoundException
+        */
+        public static void main(String[] args) throws SQLException, ClassNotFoundException {
+          Pattern p = Pattern.compile("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\\p{Punct})\\p{Graph}{8}");
+          Matcher m = p.matcher("13a!56A2");
+          boolean b = m.matches();
+          System.out.println(b)
+        }
+    }
+</pre>
+
+<h2 id="toc_1.2">Delete foo</h2>
+
+<p>
+lösche jede Zeile, welche eine Fileendung enhällt
+</p>
+<pre class="brush: bash; toolbar: false;">
+    (.*?)\.(.*)$
+</pre>
+
+<p>
+das gleiche nur im Vim
+</p>
+<pre class="brush: bash; toolbar: false;">
+    :g/\.\(.*\)$/d
+</pre>
+
+<p>
+[ <a href="index.html">Go home</a> ]
+</p>
+
+</body>
+</html>

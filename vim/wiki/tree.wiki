@@ -1,0 +1,8 @@
+﻿=ASCII Ausgabe von Dateisystem=
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ tree -AFh ./
+}}}
+
+
+[ [[index|Go home]] ]

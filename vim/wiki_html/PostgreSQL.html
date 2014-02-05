@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="./styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="./style.css" /> 
+    <link type="text/css" rel="stylesheet" href="./styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="./scripts/shCore.js"></script> 
+    <script type="text/javascript" src="./scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="./scripts/shBrushJava.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script> 
+  </head>
+  <body>
+<h1 id="toc_1">PostreSQL</h1>
+
+<p>
+If builds of <a href="PostgreSQL.html">PostgreSQL</a> 9 are failing and you have version 8.x installed,
+you may need to remove the previous version first. See:
+  <a href="https://github.com/mxcl/homebrew/issues/issue/2510">https://github.com/mxcl/homebrew/issues/issue/2510</a>
+</p>
+
+<p>
+To build plpython against a specific Python, set PYTHON prior to brewing:
+</p>
+<blockquote>
+PYTHON=/usr/local/bin/python  brew install postgresql
+</blockquote>
+<p>
+See:
+  <a href="http://www.postgresql.org/docs/9.0/static/install-procedure.html">http://www.postgresql.org/docs/9.0/static/install-procedure.html</a>
+</p>
+
+
+<p>
+If this is your first install, create a database with:
+</p>
+<blockquote>
+initdb /usr/local/var/postgres
+</blockquote>
+
+<p>
+If this is your first install, automatically load on login with:
+</p>
+<blockquote>
+cp /usr/local/Cellar/postgresql/9.0.2/org.postgresql.postgres.plist ~/Library/<a href="LaunchAgents.html">LaunchAgents</a>
+launchctl load -w ~/Library/<a href="LaunchAgents.html">LaunchAgents</a>/org.postgresql.postgres.plist
+</blockquote>
+
+<p>
+If this is an upgrade and you already have the org.postgresql.postgres.plist loaded:
+</p>
+<blockquote>
+launchctl unload -w ~/Library/<a href="LaunchAgents.html">LaunchAgents</a>/org.postgresql.postgres.plist
+cp /usr/local/Cellar/postgresql/9.0.2/org.postgresql.postgres.plist ~/Library/<a href="LaunchAgents.html">LaunchAgents</a>
+launchctl load -w ~/Library/<a href="LaunchAgents.html">LaunchAgents</a>/org.postgresql.postgres.plist
+</blockquote>
+
+<p>
+Or start manually with:
+</p>
+<blockquote>
+pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+</blockquote>
+
+<p>
+And stop with:
+</p>
+<blockquote>
+pg_ctl -D /usr/local/var/postgres stop -s -m fast
+</blockquote>
+
+<p>
+If you want to install the postgres gem, including ARCHFLAGS is recommended:
+</p>
+<blockquote>
+env ARCHFLAGS="-arch x86_64" gem install pg
+</blockquote>
+
+<p>
+To install gems without sudo, see the Homebrew wiki.
+</p>
+
+<p>
+[ <a href="index.html">Go home</a> ]
+</p>
+
+</body>
+</html>

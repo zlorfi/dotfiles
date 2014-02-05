@@ -1,0 +1,40 @@
+=Lion=
+
+==Last Played Files nicht mehr anzeigen==
+
+{{{class="brush: bash; ; toolbar: false;"
+  
+  defaults write com.apple.QuickTimePlayerX NSRecentDocumentsLimit 0
+  defaults delete com.apple.QuickTimePlayerX.LSSharedFileList RecentDocuments
+  defaults write com.apple.QuickTimePlayerX.LSSharedFileList RecentDocuments -dict-add MaxAmount 0
+
+}}}
+
+{{{class="brush: bash; ; toolbar: false;"
+  
+  defaults write org.niltsh.MPlayerX NSRecentDocumentsLimit 0
+  defaults delete org.niltsh.MPlayerX.LSSharedFileList RecentDocuments
+  defaults write org.niltsh.MPlayerX.LSSharedFileList RecentDocuments -dict-add MaxAmount 0
+
+}}}
+
+==Open Google Chrome==
+
+{{{class="brush: bash; ; toolbar: false;"
+  
+  open /Applications/Google\ Chrome\ Canary.app --args --allow-running-insecure-content
+
+}}}
+
+==Remove X11==
+
+{{{class="brush: bash; ; toolbar: false;"
+  
+  launchctl unload /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
+  sudo launchctl unload /Library/LaunchDaemons/org.macosforge.xquartz.privileged_startx.plist
+  sudo rm -rf /opt/X11* /Library/Launch*/org.macosforge.xquartz.* /Applications/Utilities/XQuartz.app /etc/*paths.d/*XQuartz
+  sudo pkgutil --forget org.macosforge.xquartz.pkg
+
+}}}
+
+[ [[index|Go home]] ]

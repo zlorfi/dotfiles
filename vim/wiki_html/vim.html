@@ -1,0 +1,249 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="./styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="./style.css" /> 
+    <link type="text/css" rel="stylesheet" href="./styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="./scripts/shCore.js"></script> 
+    <script type="text/javascript" src="./scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="./scripts/shBrushJava.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script> 
+  </head>
+  <body>
+<div class="toc">
+<ul>
+<li><a href="#toc_1">VIM</a></li>
+<ul>
+<li><a href="#toc_1.1">Remove trailing whitespace</a></li>
+<li><a href="#toc_1.2">Remove blank lines</a></li>
+<li><a href="#toc_1.3">Swap word with next word</a></li>
+<li><a href="#toc_1.4">delete all HTML tags</a></li>
+<li><a href="#toc_1.5">delete all duplicate lines</a></li>
+<li><a href="#toc_1.6">reverse content of file</a></li>
+<li><a href="#toc_1.7">useful keymaps</a></li>
+<li><a href="#toc_1.8">replace pattern</a></li>
+</ul>
+</ul>
+</div>
+
+<h1 id="toc_1">VIM</h1>
+
+<h2 id="toc_1.1">Remove trailing whitespace</h2>
+
+<pre class="brush: bash; ; toolbar: false;">
+
+:%s/\s\+$//e
+
+</pre>
+
+<h2 id="toc_1.2">Remove blank lines</h2>
+
+<pre class="brush: bash; ; toolbar: false;">
+
+:g/^\s*$/d
+
+</pre>
+
+<h2 id="toc_1.3">Swap word with next word</h2>
+
+<pre class="brush: bash; ; toolbar: false;">
+
+nmap &lt;silent&gt; gw    "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/&lt;cr&gt;&lt;c-o&gt;&lt;c-l&gt;  
+
+</pre>
+
+<h2 id="toc_1.4">delete all HTML tags</h2>
+
+<pre class="brush: bash; ; toolbar: false;">
+
+:%s#&lt;[^&gt;]\+&gt;##g
+
+</pre>
+
+<h2 id="toc_1.5">delete all duplicate lines</h2>
+
+<pre class="brush: bash; ; toolbar: false;">
+
+:%s/^\(.*\)\n\1$/\1/
+
+</pre>
+
+<h2 id="toc_1.6">reverse content of file</h2>
+
+<pre class="brush: bash; ; toolbar: false;">
+
+:g/^/m0
+
+</pre>
+
+<h2 id="toc_1.7">useful keymaps</h2>
+
+<table>
+<tr>
+<td><strong>xp</strong></td>
+<td>exchange the right character with his left combatant</td>
+</tr>
+<tr>
+<td><strong>^</strong></td>
+<td>move to the first non-blank character in the current line</td>
+</tr>
+<tr>
+<td><strong>+</strong></td>
+<td>move to the first character in the next line</td>
+</tr>
+<tr>
+<td><strong>-</strong></td>
+<td>move to the first character in the previous line</td>
+</tr>
+<tr>
+<td><strong>%</strong></td>
+<td>move to the opposite character</td>
+</tr>
+<tr>
+<td><strong>(</strong></td>
+<td>move a sentence back</td>
+</tr>
+<tr>
+<td><strong>)</strong></td>
+<td>move a sentence forward</td>
+</tr>
+<tr>
+<td><strong>{</strong></td>
+<td>move a paragraph back</td>
+</tr>
+<tr>
+<td><strong>}</strong></td>
+<td>move a paragraph forward</td>
+</tr>
+<tr>
+<td><em>n</em><strong>yy</strong></td>
+<td>yanks <em>n</em> lines into the buffer</td>
+</tr>
+<tr>
+<td><strong>/</strong><em>string</em></td>
+<td>search forward for <em>string</em></td>
+</tr>
+<tr>
+<td><strong>?</strong><em>string</em></td>
+<td>search backward for string</td>
+</tr>
+<tr>
+<td><strong>n</strong></td>
+<td>search for next instance of <em>string</em></td>
+</tr>
+<tr>
+<td><strong>N</strong></td>
+<td>search for previous instance of _string</td>
+</tr>
+<tr>
+<td><strong>zf</strong><em>3</em></td>
+<td>fold the next <em>3</em> lines (works with VISUAL MODE too</td>
+</tr>
+<tr>
+<td><strong>zO</strong></td>
+<td>open all folds at the cursor</td>
+</tr>
+<tr>
+<td><strong>d/</strong><em>string</em><strong>/</strong></td>
+<td>delete until <em>string</em></td>
+</tr>
+<tr>
+<td>*</td>
+<td>find word under cursor</td>
+</tr>
+<tr>
+<td><strong>~</strong></td>
+<td>change case</td>
+</tr>
+<tr>
+<td><strong>:ls</strong></td>
+<td>list of all buffers</td>
+</tr>
+<tr>
+<td><strong>:bn</strong></td>
+<td>next buffer</td>
+</tr>
+<tr>
+<td><strong>:bp</strong></td>
+<td>previous buffer</td>
+</tr>
+<tr>
+<td><strong>:bd</strong></td>
+<td>remove file from buffer</td>
+</tr>
+<tr>
+<td><strong>:b2</strong></td>
+<td>go to buffer <em>3</em></td>
+</tr>
+<tr>
+<td><strong>&lt;C-v&gt;</strong></td>
+<td>enter VISUAL BLOCK mode</td>
+</tr>
+<tr>
+<td><strong>Vip</strong></td>
+<td>select code block</td>
+</tr>
+<tr>
+<td><strong>g&lt;C-g&gt;</strong></td>
+<td>count all words in document</td>
+</tr>
+<tr>
+<td><strong>s</strong><em>&lt;p&gt;</em></td>
+<td>surrounding the line with <em>&lt;p&gt;</em> <em>&lt;/p&gt;</em> tags (<em>surround</em> plugin in visual mode)</td>
+</tr>
+<tr>
+<td><strong>=G</strong></td>
+<td>apply autoformat to the end of a file in visual mode</td>
+</tr>
+</table>
+
+<h2 id="toc_1.8">replace pattern</h2>
+
+<table>
+<tr>
+<td><strong>:s/</strong><em>pattern</em><strong>/</strong><em>string</em><strong>/</strong><em>flags</em></td>
+<td>replace <em>pattern</em> with <em>string</em> according to <em>flags</em></td>
+</tr>
+<tr>
+<td><strong>g</strong></td>
+<td>Flag - replace all occurences of <em>pattern</em></td>
+</tr>
+<tr>
+<td><strong>c</strong></td>
+<td>Flag - confirm replaces</td>
+</tr>
+<tr>
+<td><strong>.</strong></td>
+<td>any single caracter except newline</td>
+</tr>
+<tr>
+<td>*</td>
+<td>zwro or more occurances of any character</td>
+</tr>
+<tr>
+<td><strong>^</strong></td>
+<td>beggining of the line</td>
+</tr>
+<tr>
+<td><strong>$</strong></td>
+<td>end of line</td>
+</tr>
+<tr>
+<td><strong>\&lt;</strong></td>
+<td>beginning of word</td>
+</tr>
+<tr>
+<td><strong>\&gt;</strong></td>
+<td>end of word</td>
+</tr>
+</table>
+
+
+<p>
+[ <a href="index.html">Go home</a> ]
+</p>
+
+</body>
+</html>

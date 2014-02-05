@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="./styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="./style.css" /> 
+    <link type="text/css" rel="stylesheet" href="./styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="./scripts/shCore.js"></script> 
+    <script type="text/javascript" src="./scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="./scripts/shBrushJava.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script> 
+  </head>
+  <body>
+<h1 id="toc_1">hdiutil</h1>
+
+<h2 id="toc_1.1">Mit verschlüsselten Images arbeiten</h2>
+
+<p>
+Plattenplatz auf einem verschlüsseltem <a href="DiskImage.html">DiskImage</a> gewinnen
+</p>
+
+<pre class="brush: bash; ; toolbar: false;">
+    $ hdiutil compact image.sparsebundle
+</pre>
+
+<p>
+es vergrößern
+</p>
+
+<pre class="brush: bash; ; toolbar: false;">
+    $ hdiutil resize -size 460g UltraMobile.sparsebundle
+</pre>
+
+<p>
+es mounten
+</p>
+
+<pre class="brush: bash; ; toolbar: false;">
+    $ hdiutil attach /Volumes/UltraMobile.sparsebundle
+</pre>
+
+<p>
+und wieder auswerfen
+</p>
+
+<pre class="brush: bash; ; toolbar: false;">
+    $ hdiutil detach /Volumes/UltraMobile
+</pre>
+
+<h2 id="toc_1.2">verschlüsseltes Time Machine Backup über LAN</h2>
+
+<pre class="brush: bash; ; toolbar: false;">
+    $ hdiutil create -size 200g -fs HFS+J -type SPARSEBUNDLE -volname "mskrynsk_macbook" Fry_0023123aa44a.sparsebundle
+</pre>
+
+
+<p>
+[ <a href="index.html">Go home</a> ]
+</p>
+
+</body>
+</html>

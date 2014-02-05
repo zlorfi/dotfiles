@@ -1,0 +1,23 @@
+=Snow Leopard=
+
+==Disable Spotlight on all Volumes==
+{{{class="brush: bash; toolbar: false;"
+    sudo mdutil -a -i off
+}}}
+
+==Enable it again for the Volume Hive==
+{{{class="brush: bash; toolbar: false;"
+    sudo mdutil -i on /Volumes/Hive
+}}}
+
+==Reindex Spotlight==
+{{{class="brush: bash; toolbar: false;"
+    sudo mdutil -E /Volumes/Hive
+}}}
+
+==Disable dictionary search in Spotlight==
+{{{class="brush: bash; toolbar: false;"
+    defaults write com.apple.spotlight DictionaryLookupEnabled NO
+}}}
+
+[ [[index|Go home]] ]

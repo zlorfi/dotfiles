@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="./styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="./style.css" /> 
+    <link type="text/css" rel="stylesheet" href="./styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="./scripts/shCore.js"></script> 
+    <script type="text/javascript" src="./scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="./scripts/shBrushJava.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script> 
+  </head>
+  <body>
+<h1 id="toc_1">WMA zu MP3 konvertieren mit mplayer und lame</h1>
+ 
+<h2 id="toc_1.1">Rip with Mplayer / encode with LAME</h2>
+
+<pre class="brush: bash; ; toolbar: false;">
+    $ for i in *.wma ; do mplayer -vo null -vc dummy -af resample=44100 -ao pcm:waveheader $i &amp;&amp; lame -m s audiodump.wav -o $i; done
+</pre>
+
+<h2 id="toc_1.2">convert file names</h2>
+
+<pre class="brush: bash; ; toolbar: false;">
+    $ for i in *.wma; do mv "$i" "`basename "$i" .wma`.mp3"; done
+</pre>
+
+<h2 id="toc_1.3">code</h2>
+
+<pre class="brush: bash; ; toolbar: false;">
+    #!/bin/bash
+    #
+    # Dump wma to mp3
+    for i in *.wma
+    do
+      if [ -f "$i" ]; then
+        rm -f "$i.wav"
+        mkfifo "$i.wav"
+        mplayer -quiet -vo null -vc dummy -af volume=0,resample=44100:0:1 -ao pcm:waveheader:file="$i.wav" "$i" &amp;
+        dest=`echo "$i"|sed -e 's/wma$/mp3/'`
+        lame -V0 -h -b 160 --vbr-new "$i.wav" "$dest"
+        rm -f "$i.wav"
+      fi
+    done
+</pre>
+
+<p>
+[ <a href="index.html">Go home</a> ]
+</p>
+
+</body>
+</html>

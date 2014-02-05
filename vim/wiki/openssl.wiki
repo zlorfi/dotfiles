@@ -1,0 +1,37 @@
+=!OpenSSL=
+
+==Erstellung eines Zertifikates==
+
+{{{class="brush: bash; toolbar: false;"
+    $ openssl req -config openssl.cnf -new -newkey rsa:2048 -nodes -subj '/C=DE/ST=Hessen/L=Frankfurt am Main/O=Johann Wolfgang Goethe-Universitaet/OU=Hochschulrechenzentrum/CN=www.intrastent.uni-frankfurt.de' -keyout private_key_ellos.uni-frankfurt.de.pem -out cert_request_ellos.uni-frankfurt.de.pem
+}}}
+    
+mit der folgenden Einstellungen für //Subject Altnerative Names// in der openssl.cnf
+
+{{{class="brush: bash; toolbar: false;"
+    [req]
+    req_extensions = v3_req
+
+    [v3_req]
+    # Extensions to add to a certificate request
+    basicConstraints = CA:FALSE
+    keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+
+    # Some CAs do not yet support subjectAltName in CSRs.
+    # Instead the additional names are form entries on web
+    # pages where one requests the certificate...
+    subjectAltName          = @alt_names
+
+    [alt_names]
+    DNS.1   = www.foo.com
+    DNS.2   = www.foo.org
+}}}
+
+ob es funktioniert hat, überprüft man mit
+
+{{{class="brush: bash; toolbar: false;"
+    $ openssl req -text -noout -in $CSR_FILENAME
+}}}
+
+   
+[ [[index|Go home]] ]

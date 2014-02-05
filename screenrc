@@ -1,0 +1,7 @@
+shell -${SHELL}
+caption always "%{= kc}%H (system load: %l)%-21=%{= .m}%D %d.%m.%Y %0c"
+defscrollback 1024
+startup_message off
+hardstatus on
+hardstatus alwayslastline
+termcapinfo xterm-256color|xterm-color|xterm|xterms|xs|rxvt ti@:te@

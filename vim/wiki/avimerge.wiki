@@ -1,0 +1,16 @@
+﻿=avimerge=
+
+_avimerge_ ist im transcode Paket enthalten. Die Installation dauert sehr lange, da _MacOS_ anscheinend viele benötigten _Libraries_ nicht standardmäßig enthalten.
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ sudo port install transcode
+}}}
+
+Mehrere Videoparts in eine Datei mergen
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ avimerge -o OutputFile.avi -i Input1.avi Input2.avi
+}}}
+
+
+[ [[index|Go home]] ]

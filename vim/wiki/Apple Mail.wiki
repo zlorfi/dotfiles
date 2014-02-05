@@ -1,0 +1,15 @@
+=Apple Mail=
+
+==Mailalias==
+* Mail.app schließen
+* ~/Library/Mail/V2/MailData/Accounts.plist öffnen
+* Eintrag _MailAccounts_ aufklappen
+* den richtigen Ornder (0, 1, 2, etc) rausfinden indem man auf die Einträge achtet
+* Ordner auswählen und _Add Item_ anklicken, mit dem Namen _EmailAliases_ mit Typ _Array_
+* diesen wiederum anklicken und mit _Add Item_ einen neuen Eintrag _Item 0_ erstellen vom Typ _Dictionary_
+* auswählen neuen Key mit _alias_ vom Typ _String_ und der gewünschten Adresse
+* im _Item 0_ neuen Eintrag mit _name_ als Item _String_ als Typ und dem gewünschtem Namen für den Alias
+* abspeichern, fertig.
+
+
+[ [[index|Go home]] ]

@@ -1,0 +1,16 @@
+﻿=AES=
+
+==encrypt==
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ openssl enc -aes-128-cbc -pass pass:secret -in file.txt -out file.txt.aes
+}}}
+
+==decrypt==
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ openssl enc -aes-128-cbc -d -pass pass:secret -in file.txt.aes
+}}}
+
+
+[ [[index|Go home]] ]

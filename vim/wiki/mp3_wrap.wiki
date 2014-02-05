@@ -1,0 +1,22 @@
+=mp3 wrap=
+
+merge
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ mp3wrap tmp.mp3 *
+}}}
+
+fix file duration
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ ffmpeg -i tmp_MP3WRAP.mp3 -acodec copy all.mp3 && rm tmp_MP3WRAP.mp3
+}}}
+
+copy mp3 tags
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ id3cp 1.mp3 all.mp3
+}}}
+
+
+[ [[index|Go home]] ]

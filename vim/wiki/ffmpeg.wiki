@@ -1,0 +1,15 @@
+=ffmpeg=
+
+==1080p to 720p==
+{{{class="brush: bash; toolbar: false;"
+    ffmpeg -i "Renaissance.1080p.mkv" -vcodec libx264 -b 5120k -s 1280x720 -acodec libfaac -ab 192kb -ar 48000 -ac 2 -f mp4 -deinterlace -vpre medium -threads 0 -y "Renaissance.720p.mp4"    
+}}}
+#ac = audio_channels (2 = Stereo, 6 = 5.1)
+
+
+==2pass encoding==
+{{{class="brush: bash; toolbar: false;"
+    ffmpeg -i INPUT.avi -pass 1 -vcodec libx264 -vpre fast -b 5120k -threads 0 -f mp4 -an -y /dev/null && ffmpeg -i INPUT.avi -pass 2 -acodec libfaac -ab 192kb -ac 2 -vcodec libx264 -vpre fast -b 5120k -threads 0 OUTPUT.mp4    
+}}}
+
+[ [[index|Go home]] ]

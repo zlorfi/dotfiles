@@ -1,0 +1,36 @@
+=hdiutil=
+
+==Mit verschlüsselten Images arbeiten==
+
+Plattenplatz auf einem verschlüsseltem DiskImage gewinnen
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ hdiutil compact image.sparsebundle
+}}}
+
+es vergrößern
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ hdiutil resize -size 460g UltraMobile.sparsebundle
+}}}
+
+es mounten
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ hdiutil attach /Volumes/UltraMobile.sparsebundle
+}}}
+
+und wieder auswerfen
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ hdiutil detach /Volumes/UltraMobile
+}}}
+
+==verschlüsseltes Time Machine Backup über LAN==
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ hdiutil create -size 200g -fs HFS+J -type SPARSEBUNDLE -volname "mskrynsk_macbook" Fry_0023123aa44a.sparsebundle
+}}}
+
+
+[ [[index|Go home]] ]

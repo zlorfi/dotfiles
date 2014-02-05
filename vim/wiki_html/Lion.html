@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="./styles/shCore.css" /> 
+    <link type="text/css" rel="stylesheet" href="./style.css" /> 
+    <link type="text/css" rel="stylesheet" href="./styles/shThemeDefault.css" /> 
+    <script type="text/javascript" src="./scripts/shCore.js"></script> 
+    <script type="text/javascript" src="./scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="./scripts/shBrushJava.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script> 
+  </head>
+  <body>
+<h1 id="toc_1">Lion</h1>
+
+<h2 id="toc_1.1">Last Played Files nicht mehr anzeigen</h2>
+
+<pre class="brush: bash; ; toolbar: false;">
+  
+  defaults write com.apple.QuickTimePlayerX NSRecentDocumentsLimit 0
+  defaults delete com.apple.QuickTimePlayerX.LSSharedFileList RecentDocuments
+  defaults write com.apple.QuickTimePlayerX.LSSharedFileList RecentDocuments -dict-add MaxAmount 0
+
+</pre>
+
+<pre class="brush: bash; ; toolbar: false;">
+  
+  defaults write org.niltsh.MPlayerX NSRecentDocumentsLimit 0
+  defaults delete org.niltsh.MPlayerX.LSSharedFileList RecentDocuments
+  defaults write org.niltsh.MPlayerX.LSSharedFileList RecentDocuments -dict-add MaxAmount 0
+
+</pre>
+
+<h2 id="toc_1.2">Open Google Chrome</h2>
+
+<pre class="brush: bash; ; toolbar: false;">
+  
+  open /Applications/Google\ Chrome\ Canary.app --args --allow-running-insecure-content
+
+</pre>
+
+<h2 id="toc_1.3">Remove X11</h2>
+
+<pre class="brush: bash; ; toolbar: false;">
+  
+  launchctl unload /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
+  sudo launchctl unload /Library/LaunchDaemons/org.macosforge.xquartz.privileged_startx.plist
+  sudo rm -rf /opt/X11* /Library/Launch*/org.macosforge.xquartz.* /Applications/Utilities/XQuartz.app /etc/*paths.d/*XQuartz
+  sudo pkgutil --forget org.macosforge.xquartz.pkg
+
+</pre>
+
+<p>
+[ <a href="index.html">Go home</a> ]
+</p>
+
+</body>
+</html>
