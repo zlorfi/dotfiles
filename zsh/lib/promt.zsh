@@ -15,10 +15,12 @@ $(virtualenv_info)$(prompt_char) '
 #RPROMPT='[%T]'
 
 #RVM settings
-if [[ -s ~/.rvm/scripts/rvm ]] ; then
-    RPROMPT='[%T] %{$fg[yellow]%}rvm: %{$reset_color%}%{$fg[red]%}$(~/.rvm/bin/rvm-prompt)%{$reset_color%}'
-  else
-    RPROMPT='[%T]'
+if which rvm-prompt &> /dev/null; then
+  RPROMPT='[%T] %{$fg[yellow]%}rvm: %{$reset_color%}%{$fg[red]%}$(ruby_version)%{$reset_color%}'
+elif which rbenv &> /dev/null; then
+  RPROMPT='[%T] %{$fg[yellow]%}rbenv: %{$reset_color%}%{$fg[red]%}$(ruby_version)%{$reset_color%}'
+else
+  RPROMPT='[%T]'
 fi
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[yellow]%}"

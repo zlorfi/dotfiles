@@ -12,6 +12,10 @@ ulimit -Sn 2048
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init -)"
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=/usr/local/bin:$PATH
 PATH=/usr/local/bin:/usr/local/sbin:$PATH # Added for more brew executables
