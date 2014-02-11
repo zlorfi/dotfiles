@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Generate symlinks for files
-for i in gemrc gvimrc irbrc jumprc NERDTreeBookmarks screenrc vimrc zshrc
+for i in gemrc gvimrc irbrc jumprc NERDTreeBookmarks screenrc vimrc zshrc tmux.conf
 do
   if [ ! -f $HOME/.$i ]
   then

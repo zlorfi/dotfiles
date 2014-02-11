@@ -19,9 +19,7 @@ eval "$(rbenv init -)"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=/usr/local/bin:$PATH
 PATH=/usr/local/bin:/usr/local/sbin:$PATH # Added for more brew executables
-if [[ -f "$HOME/.amazon_keys" ]]; then
-  source "$HOME/.amazon_keys";
-fi
+
 source `jump-bin --zsh-integration`
 
 # Editor
