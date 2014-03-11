@@ -24,6 +24,7 @@ alias bb='brew update && brew outdated'
 
 alias yy='youtube-dl -f22 -t'
 
+alias j='jump'
 
 # Rails
 alias rs='rails server'
