@@ -27,4 +27,6 @@ export EDITOR=vim
 
 # SSL Certificate needed, install first with
 # brew install curl-ca-bundle
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+if [ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]; then
+  export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+fi
