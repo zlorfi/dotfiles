@@ -13,8 +13,10 @@ ulimit -Sn 2048
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-eval "$(rbenv init -)"
+if which rbenv > /dev/null;
+  export RBENV_ROOT=/usr/local/var/rbenv
+  eval "$(rbenv init -)"
+fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=/usr/local/bin:$PATH
@@ -27,4 +29,6 @@ export EDITOR=vim
 
 # SSL Certificate needed, install first with
 # brew install curl-ca-bundle
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+if [ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]; then
+  export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+fi
