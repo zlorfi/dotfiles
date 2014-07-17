@@ -2,6 +2,7 @@
 
 # some variables
 _zsh_file="/usr/local/bin/zsh"
+_homebrew=`which brew`
 
 # Generate symlinks for files
 for i in gemrc gvimrc irbrc jumprc NERDTreeBookmarks screenrc vimrc zshrc tmux.conf
@@ -32,21 +33,22 @@ else
 fi
 
 # install Homebrew
-if [ ! -f `which brew` ]
+if [ ! -f $_homebrew ]
 then
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 else
   echo "Homebrew already installed"
 fi
 
-if [ -f `which brew` ]
+if [ -f $_homebrew ]
 then
-  `which brew` install erlang imagemagick mongodb postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl zsh
+  $_homebrew install erlang imagemagick mongodb postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl zsh
 else
   echo "Homebrew not installed"
 fi
 
-if [ ! -f $_zsh_file ]
+# check if $SHELL is already set to ZSH
+if [ "$(echo $SHELL)" != "$_zsh_file" ]
 then
   echo
   echo "Changing shell to ZSH, need sudo password"
