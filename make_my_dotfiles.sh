@@ -3,6 +3,7 @@
 # some variables
 _zsh_file="/usr/local/bin/zsh"
 _homebrew=`which brew`
+_to_install="erlang imagemagick mongodb postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl zsh"
 
 # Generate symlinks for files
 for i in gemrc gvimrc irbrc jumprc NERDTreeBookmarks screenrc vimrc zshrc tmux.conf
@@ -40,9 +41,10 @@ else
   echo "Homebrew already installed"
 fi
 
+# install some stuff
 if [ -f $_homebrew ]
 then
-  $_homebrew install erlang imagemagick mongodb postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl zsh
+  $_homebrew install $_to_install
 else
   echo "Homebrew not installed"
 fi
