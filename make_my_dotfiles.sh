@@ -52,11 +52,16 @@ fi
 # check if $SHELL is already set to ZSH
 if [ "$(echo $SHELL)" != "$_zsh_file" ]
 then
-  echo
-  echo "Changing shell to ZSH, need sudo password"
-  echo
-  echo $_zsh_file | sudo tee -a /etc/shells;
-  chsh -s $_zsh_file;
+  if [ -f $zsh_file ]
+  then
+    echo
+    echo "Changing shell to ZSH, need sudo password"
+    echo
+    echo $_zsh_file | sudo tee -a /etc/shells;
+    chsh -s $_zsh_file;
+  else
+    echo "Install ZSH via Homebrew first!"
+  fi
 else
   echo "ZSH already installed"
 fi
