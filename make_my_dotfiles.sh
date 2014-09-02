@@ -60,7 +60,9 @@ then
     echo $_zsh_file | sudo tee -a /etc/shells;
     chsh -s $_zsh_file;
   else
+    echo
     echo "Install ZSH via Homebrew first!"
+    echo
   fi
 else
   echo "ZSH already installed"

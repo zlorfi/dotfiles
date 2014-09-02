@@ -18,8 +18,6 @@ alias x=extract
 
 alias m=macvim
 
-alias cssh='csshx -l fiona 141.2.37.231 141.2.37.232 141.2.37.233 141.2.37.234'
-
 alias bb='brew update && brew outdated'
 
 alias yy='youtube-dl -f22 -t'
