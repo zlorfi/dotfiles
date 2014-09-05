@@ -1,7 +1,7 @@
 " Copy to ~/.gvimrc or ~/_gvimrc.
 
 "set guifont=Menlo\ Regular:h14
-set guifont=Source\ Code\ Pro:h16
+set guifont=Source\ Code\ Pro:h14
 set antialias                     " MacVim: smooth fonts.
 set encoding=utf-8                " Use UTF-8 everywhere.
 set guioptions-=T                 " Hide toolbar.
@@ -13,7 +13,7 @@ set lines=50 columns=150          " Window dimensions.
 "set fullscreen
 set fuoptions=maxvert,maxhorz
 set transp=1
-colorscheme molokai 
+colorscheme molokai
 
 "set cmdheight=2
 
