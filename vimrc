@@ -33,7 +33,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-surround'
-"Plugin 'vimwiki/vimwiki'
+Plugin 'vimwiki/vimwiki'
 Plugin 'ingydotnet/yaml-vim'
 
 " All of your Plugins must be added before the following line
