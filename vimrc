@@ -132,6 +132,7 @@ let g:airline_theme='murmur'
 let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
+let g:airline_section_z = '%3p%% %#__accent_bold#%4l%#__restore__#:%3v'
 
 " NERDTreee show hidden files by default
 let g:NERDTreeShowHidden = 1
