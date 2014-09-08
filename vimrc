@@ -15,6 +15,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" my plugins
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
 Plugin 'ingydotnet/yaml-vim'
@@ -44,6 +45,9 @@ filetype plugin indent on    " required
 syntax on
 
 " Colorscheme
+if &term == "xterm"
+  set t_Co=256
+endif
 let g:molokai_original = 1
 color molokai
 
@@ -118,13 +122,15 @@ set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 
-" set laststatus=2                  " Show the status line all the time
+set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 " set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{fugitive#statusline()}\ %=%-16(\ Line:\ %l\ of\ %L\ %)\ %=%-30(%{strftime(\"\%c\",getftime(expand(\"\%\%\")))}\ %)%P
 " set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%-16(\ Line:\ %l\ of\ %L\ %)\ %=%-30(%{strftime(\"\%c\",getftime(expand(\"\%\%\")))}\ %)%P
 
 " airline Smarter tab line
+let g:airline_theme='murmur'
 let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
 
 " NERDTreee show hidden files by default
