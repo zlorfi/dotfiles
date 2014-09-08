@@ -5,13 +5,8 @@ set nocompatible
 " lots of command line history
 set history=1000
 
-" Initialize Pathogen
-" runtime bundle/vim-pathogen/autoload/pathogen.vim
-" execute pathogen#infect()
-
 " filetype plugin indent on
 filetype off
-
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
