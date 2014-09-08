@@ -1,7 +1,7 @@
 " Copy to ~/.gvimrc or ~/_gvimrc.
 
-"set guifont=Menlo\ Regular:h14
-set guifont=Source\ Code\ Pro:h14
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14 "make sure to escape the spaces in the name properly
+" set guifont=Source\ Code\ Pro:h16
 set antialias                     " MacVim: smooth fonts.
 set encoding=utf-8                " Use UTF-8 everywhere.
 set guioptions-=T                 " Hide toolbar.

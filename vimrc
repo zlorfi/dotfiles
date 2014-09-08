@@ -6,12 +6,47 @@ set nocompatible
 set history=1000
 
 " Initialize Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
+" runtime bundle/vim-pathogen/autoload/pathogen.vim
+" execute pathogen#infect()
+
+" filetype plugin indent on
+filetype off
+
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'bling/vim-airline'
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'sjl/gundo.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-cucumber'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-haml'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-surround'
+Plugin 'vimwiki/vimwiki'
+Plugin 'ingydotnet/yaml-vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " Enable syntax highlighting
 syntax on
-filetype plugin indent on
 
 " Colorscheme
 let g:molokai_original = 1
@@ -46,7 +81,8 @@ set softtabstop=2
 set expandtab
 
 " SET Font
-set guifont=Menlo\ Regular:h14
+" set guifont=Menlo\ Regular:h14
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14 "make sure to escape the spaces in the name properly
 
 " Show trailing spaces and highlight hard tabs
 set list listchars=tab:»·,trail:·
@@ -87,10 +123,14 @@ set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 
-set laststatus=2                  " Show the status line all the time
+" set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{fugitive#statusline()}\ %=%-16(\ Line:\ %l\ of\ %L\ %)\ %=%-30(%{strftime(\"\%c\",getftime(expand(\"\%\%\")))}\ %)%P
+" set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{fugitive#statusline()}\ %=%-16(\ Line:\ %l\ of\ %L\ %)\ %=%-30(%{strftime(\"\%c\",getftime(expand(\"\%\%\")))}\ %)%P
 " set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%-16(\ Line:\ %l\ of\ %L\ %)\ %=%-30(%{strftime(\"\%c\",getftime(expand(\"\%\%\")))}\ %)%P
+
+" airline Smarter tab line
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " NERDTreee show hidden files by default
 let g:NERDTreeShowHidden = 1
