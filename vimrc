@@ -9,7 +9,7 @@ set history=1000
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/dotfiles/vim/bundle/Vundle.vim
+set rtp+=~/dotfiles/vim/bundle/vundle
 call vundle#begin()
 
 " let Vundle manage Vundle, required
