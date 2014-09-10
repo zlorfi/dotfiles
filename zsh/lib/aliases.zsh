@@ -27,3 +27,5 @@ alias j='jump'
 # Rails
 alias rs='rails server'
 alias rc='rails console'
+
+alias bx='bundle exec'
