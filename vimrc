@@ -9,7 +9,7 @@ set history=1000
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/dotfiles/vim/bundle/vundle
+set rtp+=~/dotfiles/vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
@@ -17,6 +17,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " my plugins
 Plugin 'bling/vim-airline'
+Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
 Plugin 'ingydotnet/yaml-vim'
 Plugin 'kchmck/vim-coffee-script'
