@@ -3,7 +3,7 @@
 # some variables
 _zsh_file="/usr/local/bin/zsh"
 _homebrew=`which brew`
-_to_install="csshx erlang imagemagick mongodb postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl zsh"
+_to_install="csshx erlang imagemagick mongodb postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl zsh peco"
 
 # Generate symlinks for files
 for i in gemrc gvimrc irbrc jumprc NERDTreeBookmarks screenrc vimrc zshrc tmux.conf
@@ -44,6 +44,7 @@ fi
 # install some stuff
 if [ -f $_homebrew ]
 then
+  $_homebrew tap peco/peco
   $_homebrew install $_to_install
 else
   echo "Homebrew not installed"
