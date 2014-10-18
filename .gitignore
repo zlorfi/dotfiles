@@ -2,4 +2,4 @@
 tmp*
 .netrwhist
 .swp
-vim/bundle/
+vim/bundle/*
