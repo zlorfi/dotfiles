@@ -1,0 +1,9 @@
+=rbenv=
+
+Ruby 1.9.3 mit einem andren Compiler installieren
+
+{{{class="brush: bash; ; toolbar: false;"
+    $ env CC=/usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 rbenv install 1.9.3-p547
+}}}
+
+[ [[index|Go home]] ]

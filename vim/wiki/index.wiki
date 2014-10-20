@@ -9,5 +9,6 @@ This is my private wiki because my brain has a limited stack size.
 * [[generate bootable USB stick]]
 * [[hdiutil]]
 * [[pdf_decrypt]]
+* [[rbenv]]
 * [[ssh-copy-id]]
 * [[vim]]
