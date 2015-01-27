@@ -1,5 +1,13 @@
 export ZSH=$HOME/.zsh
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# rbenv
+if which rbenv > /dev/null; then
+  export RBENV_ROOT=/usr/local/var/rbenv
+  eval "$(rbenv init -)"
+fi
+
 # Load all of the config files in ~/oh-my-zsh that end in .zsh
 for config_file ($ZSH/lib/*.zsh) source $config_file
 
@@ -7,16 +15,8 @@ for config_file ($ZSH/lib/*.zsh) source $config_file
 autoload -U compinit
 compinit -i
 
-ulimit -Hn 2048
-ulimit -Sn 2048
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-# rbenv
-if which rbenv > /dev/null; then
-  export RBENV_ROOT=/usr/local/var/rbenv
-  eval "$(rbenv init -)"
-fi
+#ulimit -Hn 2048
+#ulimit -Sn 2048
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=/usr/local/bin:$PATH
