@@ -3,7 +3,7 @@
 # some variables
 _zsh_file="/usr/local/bin/zsh"
 _homebrew=`which brew`
-_to_install="csshx erlang imagemagick mongodb postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl zsh peco elixir git gcc46"
+_to_install="imagemagick mongodb postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl zsh elixir git"
 
 # Generate symlinks for files
 for i in gemrc gvimrc irbrc jumprc NERDTreeBookmarks screenrc vimrc zshrc tmux.conf
@@ -36,7 +36,7 @@ fi
 # install Homebrew
 if [ ! -f $_homebrew ]
 then
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
   echo "Homebrew already installed"
 fi
@@ -44,7 +44,6 @@ fi
 # install some stuff
 if [ -f $_homebrew ]
 then
-  $_homebrew tap peco/peco
   $_homebrew install $_to_install
 else
   echo "Homebrew not installed"
