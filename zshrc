@@ -21,7 +21,7 @@ compinit -i
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=/usr/local/bin:$PATH
 PATH=/usr/local/bin:/usr/local/sbin:$PATH # Added for more brew executables
-PATH=/opt/chef/bin:/opt/chefdk/bin:$PATH # Added for more brew executables
+PATH=/opt/chefdk/bin:/opt/chef/bin:$PATH # Added for more brew executables
 
 source `jump-bin --zsh-integration`
 
