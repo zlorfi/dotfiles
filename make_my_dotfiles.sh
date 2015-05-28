@@ -6,7 +6,7 @@ _homebrew=`which brew`
 _to_install="csshx erlang imagemagick mongodb postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl zsh peco elixir git gcc46"
 
 # Generate symlinks for files
-for i in gemrc gvimrc irbrc jumprc NERDTreeBookmarks screenrc vimrc zshrc tmux.conf
+for i in gemrc gvimrc irbrc jumprc NERDTreeBookmarks screenrc vimrc zshrc tmux.conf rspec
 do
   if [ ! -f $HOME/.$i ]
   then
