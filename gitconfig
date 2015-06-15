@@ -1,0 +1,9 @@
+[user]
+  name = Michael Skrynski
+  email = zlorfi@gmail.com
+[push]
+  default = simple
+[core]
+  excludesfile = /Users/michi/.gitignore
+[branch]
+  autosetuprebase = always
