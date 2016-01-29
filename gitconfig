@@ -5,5 +5,8 @@
   default = simple
 [core]
   excludesfile = /Users/michi/.gitignore
+  editor = macvim
 [branch]
   autosetuprebase = always
+[color]
+  ui = auto
