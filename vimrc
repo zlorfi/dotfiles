@@ -16,7 +16,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " my plugins
-Plugin 'bling/vim-airline'
 Plugin 'danro/rename.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
@@ -42,6 +41,8 @@ Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'vimwiki/vimwiki'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/tComment'
 

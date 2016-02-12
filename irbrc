@@ -10,10 +10,10 @@ IRB.conf[:HISTORY_FILE] = File.expand_path('~/.irb_history')
 
 # Automatic Indentation
 IRB.conf[:AUTO_INDENT] = true
- 
+
 # Load the readline module.
 IRB.conf[:USE_READLINE] = true
- 
+
 # Remove the annoying irb(main):001:0 and replace with >>
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
@@ -32,7 +32,7 @@ end
 ## Enable wirble
 #require 'wirble'
 #Wirble.init
-# 
+#
 ## Enable colored output
 #Wirble.colorize
 
