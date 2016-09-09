@@ -16,6 +16,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " my plugins
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'danro/rename.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
@@ -23,10 +24,12 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'ingydotnet/yaml-vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'kien/ctrlp.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'magarcia/vim-angular2-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'mileszs/ack.vim'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdcommenter'
@@ -197,10 +200,6 @@ map <leader>lo :NERDTree
 map <leader>_ :GundoToggle<cr>
 " Marked.app is an Markdown interpreter on MacOS
 map <leader>m :silent !open -a Marked.app '%:p'<cr>
-
-map <leader>f :FufFileWithFullCwd<cr>
-map <leader>d :FufFileWithCurrentBufferDir<cr>
-map <leader>b :FufBuffer<cr>
 
 " NerdComment
 map <leader>cc :NERDComInvertComment

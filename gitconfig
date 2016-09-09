@@ -3,9 +3,11 @@
   email = zlorfi@gmail.com
 [push]
   default = simple
+[pull]
+  rebase = true
 [core]
   excludesfile = /Users/michi/.gitignore
-  editor = macvim
+  editor = atom
 [branch]
   autosetuprebase = always
 [color]

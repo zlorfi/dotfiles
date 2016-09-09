@@ -29,15 +29,6 @@ begin
 rescue LoadError => err
   warn "Couldn't load awesome_print: #{err}"
 end
-## Enable wirble
-#require 'wirble'
-#Wirble.init
-#
-## Enable colored output
-#Wirble.colorize
-
-# load rails stuff?
-# load (File.dirname(__FILE__) + '/.railsrc') if $0 == 'irb' && ENV['RAILS_ENV']
 
 script_console_running = ENV.include?('RAILS_ENV') && IRB.conf[:LOAD_MODULES] && IRB.conf[:LOAD_MODULES].include?('console_with_helpers')
 rails_running = ENV.include?('RAILS_ENV') && !(IRB.conf[:LOAD_MODULES] && IRB.conf[:LOAD_MODULES].include?('console_with_helpers'))
@@ -47,4 +38,3 @@ if script_console_running
   require 'logger'
   Object.const_set(:RAILS_DEFAULT_LOGGER, Logger.new(STDOUT))
 end
-

@@ -30,16 +30,3 @@ alias gba='git branch -a'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 alias glg='git log --stat --max-count=5'
-
-# Will return the current branch name
-# Usage example: git pull origin $(current_branch)
-#
-function current_branch() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo ${ref#refs/heads/}
-}
-
-# these aliases take advantage of the previous function
-alias ggpull='git pull origin $(current_branch)'
-alias ggpush='git push origin $(current_branch)'
-alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
