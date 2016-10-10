@@ -1,4 +1,6 @@
 dl /Users/michi/Downloads
 root /Users/michi
 
-ruby /Users/michi/Documents/workspace_ruby
+active /Users/michi/Documents/workspace_active
+archive /Users/michi/Documents/workspace_archive
+private /Users/michi/Documents/workspace_private

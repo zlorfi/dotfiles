@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-def generate_code(number)
-  charset = Array('A'..'Z') + Array('a'..'z') + Array(0 .. 9)
-  Array.new(number) { charset.sample }.join
+def generate_code(length)
+  charset = (('A'..'Z').to_a + ('a'..'z').to_a + ('0'..'9').to_a) - %w{1 2 5 S Z l o O 0}
+  Array.new(length) { charset.sample }.join
 end
 
 20.times {puts generate_code(20)}

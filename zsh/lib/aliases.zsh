@@ -18,4 +18,4 @@ alias yy='youtube-dl -f22 -t'
 alias bx='bundle exec'
 
 # jump to workspace_ruby
-alias wr='cd $HOME/Documents/workspace_ruby/'
+alias wa='cd $HOME/Documents/workspace_active/'

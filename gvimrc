@@ -17,3 +17,7 @@ colorscheme molokai
 
 "set cmdheight=2
 
+if has("gui_macvim")
+  macmenu File.Print key=<nop>
+endif
+

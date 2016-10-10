@@ -159,7 +159,6 @@ let g:airline#extensions#tabline#show_buffers = 0
 let g:airline_section_z = '%3p%% %#__accent_bold#%4l%#__restore__#:%3v'
 " let g:airline#extensions#tabline#fnamemod = ':t'
 
-
 " NERDTreee show hidden files by default
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeChDirMode = 2
@@ -179,6 +178,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.eunit$',
   \ 'file': '\.exe$\|\.so$\|\.dll\|\.beam$\|\.DS_Store$'
   \ }
+let g:ctrlp_map = '<D-p>'
 
 " VimWiki Settings
 let g:vimwiki_list = [{'path': '~/.vim/wiki/', 'path_html': '~/.vim/wiki_html/', 'html_header': '~/.vim/wiki_html/header.tpl'}]
