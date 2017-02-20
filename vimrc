@@ -17,24 +17,18 @@ Plugin 'gmarik/Vundle.vim'
 
 " my plugins
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'danro/rename.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
 Plugin 'garbas/vim-snipmate'
 Plugin 'ingydotnet/yaml-vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'magarcia/vim-angular2-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'mileszs/ack.vim'
 Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
-Plugin 'Raimondi/delimitMate'
+" Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-cucumber'
@@ -120,8 +114,8 @@ set title
 " No beeping.
 set visualbell
 
-" Map Ctrl+l to clear highlighted searches
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+" Remove highlights with leader + enter
+nmap <Leader><CR> :nohlsearch<cr>
 
 " Highlight characters behind the 80 chars margin
 " :au BufWinEnter * let w:m2=matchadd('ColumnMargin', '\%>80v.\+', -1)
@@ -201,9 +195,13 @@ map <leader>_ :GundoToggle<cr>
 " Marked.app is an Markdown interpreter on MacOS
 map <leader>m :silent !open -a Marked.app '%:p'<cr>
 
+" Buffer switching
+map <leader>p :bp<CR> " \p previous buffer
+map <leader>n :bn<CR> " \n next buffer
+map <leader>d :bd<CR> " \d delete buffer
+
 " NerdComment
 map <leader>cc :NERDComInvertComment
 
 " swap word with next word
 nmap <silent> gw    "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr><c-o><c-l>
-
