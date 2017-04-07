@@ -7,7 +7,7 @@
   rebase = true
 [core]
   excludesfile = /Users/michi/.gitignore
-  editor = atom
+  editor = 'vim'
 [branch]
   autosetuprebase = always
 [color]

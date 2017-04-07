@@ -1,5 +1,7 @@
 export ZSH=$HOME/.zsh
 
+fpath=( "$ZSH/zfunctions" $fpath )
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # rbenv
@@ -21,3 +23,9 @@ PATH=/usr/local/bin:/usr/local/sbin:$PATH # Added for more brew executables
 
 # Editor
 export EDITOR=vim
+
+# Theme
+autoload -U promptinit; promptinit
+# optionally define some options
+PURE_CMD_MAX_EXEC_TIME=10
+prompt pure

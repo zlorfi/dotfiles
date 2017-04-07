@@ -1,6 +1,5 @@
 # ls colors
 autoload colors; colors;
-#export LS_COLORS
 
 # Enable ls colors
 if [ "$DISABLE_LS_COLORS" != "true" ]
@@ -23,5 +22,4 @@ else
 fi
 
 # Setup the prompt with pretty colors
-setopt prompt_subst
-
+# setopt prompt_subst
