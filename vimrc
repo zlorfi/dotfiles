@@ -37,7 +37,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
-Plugin 'vimwiki/vimwiki'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-ruby/vim-ruby'
@@ -174,9 +173,6 @@ let g:ctrlp_custom_ignore = {
   \ }
 let g:ctrlp_map = '<D-p>'
 
-" VimWiki Settings
-let g:vimwiki_list = [{'path': '~/.vim/wiki/', 'path_html': '~/.vim/wiki_html/', 'html_header': '~/.vim/wiki_html/header.tpl'}]
-
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit
@@ -187,8 +183,6 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
-map <leader>w2h :Vimwiki2HTML
-map <leader>wa2h :VimwikiAll2HTML<cr>
 map <leader>ll :NERDTreeToggle<cr>
 map <leader>lo :NERDTree
 map <leader>_ :GundoToggle<cr>

@@ -1,7 +1,0 @@
-=PDF vom  Passwortschutz mittels Ghostscript befreien=
-{{{class="brush: bash; ; toolbar: false;"
-    $ gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=unencrypted.pdf -c .setpdfwrite -f encrypted.pdf
-}}}
-
-
-[ [[index|Go home]] ]
