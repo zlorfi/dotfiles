@@ -2,9 +2,6 @@
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
 
-## file rename magick
-bindkey "^[m" copy-prev-shell-word
-
 ## jobs
 setopt long_list_jobs
 
@@ -12,4 +9,3 @@ setopt long_list_jobs
 export PAGER=less
 export LC_CTYPE=$LANG
 #export LC_CTYPE=de_DE.UTF-8
-

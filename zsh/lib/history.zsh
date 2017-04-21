@@ -3,6 +3,8 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
 
+alias history='fc -El 1' # "dd.mm.yyyy"
+
 setopt append_history
 setopt extended_history
 setopt hist_expire_dups_first
