@@ -5,4 +5,6 @@ def generate_code(length)
   Array.new(length) { charset.sample }.join
 end
 
-20.times {puts generate_code(20)}
+10.times {puts generate_code(10)}
+10.times {puts generate_code(20)}
+10.times {puts generate_code(30)}
