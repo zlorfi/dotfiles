@@ -17,30 +17,32 @@ Plugin 'gmarik/Vundle.vim'
 
 " my plugins
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'elixir-lang/vim-elixir'
+" Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
-Plugin 'garbas/vim-snipmate'
-Plugin 'ingydotnet/yaml-vim'
+" Plugin 'garbas/vim-snipmate'
+" Plugin 'ingydotnet/yaml-vim'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'pangloss/vim-javascript'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'MarcWeber/vim-addon-mw-utils'
+" Plugin 'mustache/vim-mustache-handlebars'
+" Plugin 'pangloss/vim-javascript'
 " Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'sjl/gundo.vim'
-Plugin 'tomtom/tlib_vim'
-Plugin 'tpope/vim-cucumber'
+" Plugin 'tomtom/tlib_vim'
+" Plugin 'tpope/vim-cucumber'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-rails'
+" Plugin 'tpope/vim-haml'
+" Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'vim-scripts/tComment'
+" Plugin 'vim-ruby/vim-ruby'
+" Plugin 'vim-scripts/tComment'
+Plugin 'w0rp/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -157,6 +159,13 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeIgnore=['\.DS_Store']
 
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+
+" keep ALE gutter open at all times
+let g:ale_sign_column_always = 1
+
 " make uses real tabs
 au FileType make set noexpandtab
 
@@ -171,31 +180,31 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.eunit$',
   \ 'file': '\.exe$\|\.so$\|\.dll\|\.beam$\|\.DS_Store$'
   \ }
-let g:ctrlp_map = '<D-p>'
+let g:ctrlp_map = '<c-p>'
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
-map <leader>te :tabedit
+map <leader>te :tabedit<cr>
 map <leader>tc :tabclose<cr>
 map <leader>to :tabonly<cr>
 map <leader>tn :tabnext<cr>
 map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
-map <leader>tm :tabmove
+map <leader>tm :tabmove<cr>
 map <leader>ll :NERDTreeToggle<cr>
-map <leader>lo :NERDTree
+map <leader>lo :NERDTree<cr>
 map <leader>_ :GundoToggle<cr>
 " Marked.app is an Markdown interpreter on MacOS
 map <leader>m :silent !open -a Marked.app '%:p'<cr>
 
 " Buffer switching
-map <leader>p :bp<CR> " \p previous buffer
-map <leader>n :bn<CR> " \n next buffer
-map <leader>d :bd<CR> " \d delete buffer
+map <leader>p :bp<cr> " \p previous buffer
+map <leader>n :bn<cr> " \n next buffer
+map <leader>d :bd<cr> " \d delete buffer
 
 " NerdComment
-map <leader>cc :NERDComInvertComment
+map <leader>cc :NERDComInvertComment<cr>
 
 " swap word with next word
 nmap <silent> gw    "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr><c-o><c-l>
