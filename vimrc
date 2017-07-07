@@ -16,6 +16,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " my plugins
+Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
@@ -64,6 +65,12 @@ let mapleader = "_"
 " Add line numbers
 set number
 set ruler
+
+" ruler at 120 characters
+if (exists('+colorcolumn'))
+  set colorcolumn=120
+  highlight ColorColumn ctermbg=8
+endif
 
 " Set encoding
 set encoding=utf-8
