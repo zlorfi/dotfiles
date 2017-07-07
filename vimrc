@@ -128,6 +128,8 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
+" highlite active line
+set cursorline
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
