@@ -1,6 +1,8 @@
-dl /Users/michi/Downloads
-root /Users/michi
+active ~/Documents/workspace_active
+archive ~/Documents/workspace_archive
+dl ~/Downloads
+dotfiles ~/dotfiles
+Downloads ~/Downloads
+private ~/Documents/workspace_private
+root ~/
 
-active /Users/michi/Documents/workspace_active
-archive /Users/michi/Documents/workspace_archive
-private /Users/michi/Documents/workspace_private

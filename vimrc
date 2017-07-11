@@ -43,7 +43,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'vim-ruby/vim-ruby'
 " Plugin 'vim-scripts/tComment'
-Plugin 'w0rp/ale'
+" Plugin 'w0rp/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

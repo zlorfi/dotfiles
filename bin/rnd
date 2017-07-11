@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
 
 def generate_code(length)
-  charset = (('A'..'Z').to_a + ('a'..'z').to_a + ('0'..'9').to_a) - %w{1 2 5 S Z l o O 0}
+  charset = (('A'..'Z').to_a + ('a'..'z').to_a + ('0'..'9').to_a) - %w[1 2 5 S Z l o O 0]
   Array.new(length) { charset.sample }.join
 end
 
-10.times {puts generate_code(10)}
-10.times {puts generate_code(20)}
-10.times {puts generate_code(30)}
+10.times { puts generate_code(10) }
+10.times { puts generate_code(20) }
+10.times { puts generate_code(30) }
+1.times { puts generate_code(265) }
