@@ -3,3 +3,4 @@ tmp*
 .netrwhist
 .swp
 vim/bundle/*
+vim/autoload/*

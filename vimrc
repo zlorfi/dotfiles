@@ -8,49 +8,48 @@ set history=1000
 " filetype plugin indent on
 filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/dotfiles/vim/bundle/Vundle.vim
-call vundle#begin()
+" Load vim-plug if not already installed
+if empty(glob("~/.vim/autoload/plug.vim"))
+  " Ensure all needed directories exist
+  execute 'mkdir -p ~/.vim/bundle'
+  execute 'mkdir -p ~/.vim/autoload'
+  " Download the actual plugin manager
+  execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" Specify a directory for plugins
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/bundle')
 
-" my plugins
-Plugin 'airblade/vim-gitgutter'
-Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'elixir-lang/vim-elixir'
-Plugin 'ervandew/supertab'
-" Plugin 'garbas/vim-snipmate'
-" Plugin 'ingydotnet/yaml-vim'
-Plugin 'jiangmiao/auto-pairs'
-" Plugin 'kchmck/vim-coffee-script'
-" Plugin 'MarcWeber/vim-addon-mw-utils'
-" Plugin 'mustache/vim-mustache-handlebars'
-" Plugin 'pangloss/vim-javascript'
-" Plugin 'Raimondi/delimitMate'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'sjl/gundo.vim'
-" Plugin 'tomtom/tlib_vim'
-" Plugin 'tpope/vim-cucumber'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-" Plugin 'tpope/vim-haml'
-" Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-" Plugin 'vim-ruby/vim-ruby'
-" Plugin 'vim-scripts/tComment'
-" Plugin 'w0rp/ale'
+" Show git status in the gutter
+Plug 'airblade/vim-gitgutter'
+" Fuzzy file finder
+Plug 'ctrlpvim/ctrlp.vim'
+" Tab support
+Plug 'ervandew/supertab'
+" autocomplete brackets
+Plug 'jiangmiao/auto-pairs'
+" Undo
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
+" Comment function
+Plug 'scrooloose/nerdcommenter'
+" Filebrowser, load on first invocation of 'NERDTreeToggle'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" Language packs
+Plug 'sheerun/vim-polyglot'
+" Wisley add 'end' in Ruby
+Plug 'tpope/vim-endwise'
+" Git wrapper
+Plug 'tpope/vim-fugitive'
+" Statusline
+Plug 'vim-airline/vim-airline'
+" Statusline themes
+Plug 'vim-airline/vim-airline-themes'
+" Linter
+" Plug 'w0rp/ale'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" Enable syntax highlighting
-syntax on
+" Initialize plugin system
+call plug#end()
 
 " Colorscheme
 if &term == "xterm"
@@ -139,9 +138,12 @@ set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 set cursorline
 
 set laststatus=2                  " Show the status line all the time
-" Useful status information at bottom of screen
-" set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{fugitive#statusline()}\ %=%-16(\ Line:\ %l\ of\ %L\ %)\ %=%-30(%{strftime(\"\%c\",getftime(expand(\"\%\%\")))}\ %)%P
-" set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%-16(\ Line:\ %l\ of\ %L\ %)\ %=%-30(%{strftime(\"\%c\",getftime(expand(\"\%\%\")))}\ %)%P
+
+" persistent undo
+if has("persistent_undo")
+  set undodir=/$HOME/.vim/tmp/
+  set undofile
+endif
 
 " airline
 if !exists("g:airline_symbols")
@@ -203,7 +205,7 @@ map <leader>tl :tablast<cr>
 map <leader>tm :tabmove<cr>
 map <leader>ll :NERDTreeToggle<cr>
 map <leader>lo :NERDTree<cr>
-map <leader>_ :GundoToggle<cr>
+map <leader>_ :UndotreeToggle<cr>
 " Marked.app is an Markdown interpreter on MacOS
 map <leader>m :silent !open -a Marked.app '%:p'<cr>
 
