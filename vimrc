@@ -54,8 +54,10 @@ call plug#end()
 if &term == "xterm"
   set t_Co=256
 endif
-let g:molokai_original = 1
-colorscheme molokai
+" let g:molokai_original = 1
+" colorscheme molokai
+set background=light
+colorscheme one
 
 " Map <Leader>
 let mapleader = "_"
@@ -149,7 +151,7 @@ if !exists("g:airline_symbols")
   let g:airline_symbols = {}
 endif
 
-let g:airline_theme='murmur'
+let g:airline_theme='papercolor'
 let g:airline_powerline_fonts=1
 " let g:airline_section_warning = airline#section#create([ "syntastic" ])
 let g:airline#extensions#branch#empty_message  =  "No SCM"

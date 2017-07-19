@@ -13,12 +13,13 @@ set lines=50 columns=150          " Window dimensions.
 "set fullscreen
 set fuoptions=maxvert,maxhorz
 set transp=1
-let g:molokai_original = 1
-colorscheme molokai
+" let g:molokai_original = 1
+" colorscheme molokai
+set background=light
+colorscheme one
 
 "set cmdheight=2
 
 if has("gui_macvim")
   macmenu File.Print key=<nop>
 endif
-
