@@ -18,7 +18,6 @@ if empty(glob("~/.vim/autoload/plug.vim"))
 endif
 
 " Specify a directory for plugins
-" - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/bundle')
 
 " Show git status in the gutter
@@ -55,8 +54,9 @@ call plug#end()
 if &term == "xterm"
   set t_Co=256
 endif
-let g:molokai_original = 1
-color molokai
+" let g:molokai_original = 1
+" colorscheme molokai
+colorscheme smyck
 
 " Map <Leader>
 let mapleader = "_"
