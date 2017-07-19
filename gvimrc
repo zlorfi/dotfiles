@@ -13,8 +13,8 @@ set lines=50 columns=150          " Window dimensions.
 "set fullscreen
 set fuoptions=maxvert,maxhorz
 set transp=1
-colorscheme smyck
-" colorscheme molokai
+let g:molokai_original = 1
+colorscheme molokai
 
 "set cmdheight=2
 

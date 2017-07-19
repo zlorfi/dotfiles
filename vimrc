@@ -54,9 +54,8 @@ call plug#end()
 if &term == "xterm"
   set t_Co=256
 endif
-" let g:molokai_original = 1
-" colorscheme molokai
-colorscheme smyck
+let g:molokai_original = 1
+colorscheme molokai
 
 " Map <Leader>
 let mapleader = "_"
