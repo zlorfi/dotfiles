@@ -16,7 +16,7 @@ set transp=1
 " let g:molokai_original = 1
 " colorscheme molokai
 set background=light
-colorscheme one
+colorscheme solarized
 
 "set cmdheight=2
 

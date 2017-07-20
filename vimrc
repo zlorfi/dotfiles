@@ -57,7 +57,7 @@ endif
 " let g:molokai_original = 1
 " colorscheme molokai
 set background=light
-colorscheme one
+colorscheme solarized
 
 " Map <Leader>
 let mapleader = "_"
