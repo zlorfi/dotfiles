@@ -3,7 +3,7 @@
 # some variables
 _zsh_file="/usr/local/bin/zsh"
 _homebrew=`which brew`
-_to_install="imagemagick mongodb postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl zsh elixir git vim --with-override-system-vi"
+_to_install="the_silver_searcher imagemagick mongodb postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl zsh elixir git vim --with-override-system-vi"
 
 # Generate symlinks for files
 for i in gemrc gitconfig gitignore gvimrc irbrc mongorc.js NERDTreeBookmarks rspec screenrc tmux.conf vimrc zshrc rubocop.yml

@@ -24,6 +24,8 @@ call plug#begin('~/.vim/bundle')
 Plug 'airblade/vim-gitgutter'
 " Fuzzy file finder
 Plug 'ctrlpvim/ctrlp.vim'
+" Elixir support
+Plug 'elixir-lang/vim-elixir'
 " Tab support
 Plug 'ervandew/supertab'
 " autocomplete brackets
@@ -36,7 +38,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " Language packs
 Plug 'sheerun/vim-polyglot'
-" Wisley add 'end' in Ruby
+" Wisely add 'end' in Ruby
 Plug 'tpope/vim-endwise'
 " Git wrapper
 Plug 'tpope/vim-fugitive'
@@ -205,7 +207,8 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove<cr>
 map <leader>ll :NERDTreeToggle<cr>
-map <leader>lo :NERDTree<cr>
+" no <cr> at the end to be able to submit bookmark
+map <leader>lo :NERDTree<SPACE>
 map <leader>_ :UndotreeToggle<cr>
 " Marked.app is an Markdown interpreter on MacOS
 map <leader>m :silent !open -a Marked.app '%:p'<cr>
@@ -215,8 +218,19 @@ map <leader>p :bp<cr> " \p previous buffer
 map <leader>n :bn<cr> " \n next buffer
 map <leader>d :bd<cr> " \d delete buffer
 
-" NerdComment
-map <leader>cc :NERDComInvertComment<cr>
-
 " swap word with next word
 nmap <silent> gw    "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr><c-o><c-l>
+
+" use the_silver_searcher
+if executable('ag')
+  " Search with ack
+  Plug 'mileszs/ack.vim'
+  " bind ag to ack
+  let g:ackprg = 'ag --vimgrep'
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+  " map F to recursive search
+  map <leader>F :Ack<SPACE>
+endif

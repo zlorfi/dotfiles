@@ -4,3 +4,4 @@ tmp*
 .swp
 vim/bundle/*
 vim/autoload/*
+zsh/lib/aws.zsh

@@ -3,6 +3,7 @@ archive ~/Documents/workspace_archive
 dl ~/Downloads
 dotfiles ~/dotfiles
 Downloads ~/Downloads
+dropbox ~/Dropbox
 private ~/Documents/workspace_private
 root ~/
 
