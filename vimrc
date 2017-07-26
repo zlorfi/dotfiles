@@ -32,6 +32,8 @@ Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 " Undo
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
+" Search with ack
+Plug 'mileszs/ack.vim'
 " Comment function
 Plug 'scrooloose/nerdcommenter'
 " Filebrowser, load on first invocation of 'NERDTreeToggle'
@@ -196,6 +198,11 @@ let g:ctrlp_custom_ignore = {
   \ }
 let g:ctrlp_map = '<c-p>'
 
+" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+" ag is fast enough that CtrlP doesn't need to cache
+let g:ctrlp_use_caching = 0
+
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit<cr>
@@ -221,16 +228,8 @@ map <leader>d :bd<cr> " \d delete buffer
 " swap word with next word
 nmap <silent> gw    "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr><c-o><c-l>
 
-" use the_silver_searcher
-if executable('ag')
-  " Search with ack
-  Plug 'mileszs/ack.vim'
-  " bind ag to ack
-  let g:ackprg = 'ag --vimgrep'
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-  " map F to recursive search
-  map <leader>F :Ack<SPACE>
-endif
+" map F to recursive search
+map <leader>F :Ack<SPACE>
+
+" bind ag(the_silver_searcher) to ack
+let g:ackprg = 'ag --vimgrep'
