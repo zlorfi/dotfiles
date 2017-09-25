@@ -63,6 +63,9 @@ endif
 set background=light
 colorscheme solarized
 
+" set default shell
+set shell=/bin/bash
+
 " Map <Leader>
 let mapleader = "_"
 

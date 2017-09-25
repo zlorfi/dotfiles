@@ -114,6 +114,9 @@ prompt_pure_preprompt_render() {
   # Set the path.
   preprompt_parts+=('%F{blue}%~%f')
 
+  # NOTE: hack to prevent '~RVM_PROJECT_PATH'
+  hash -rd
+
   # Add git branch and dirty status info.
   typeset -gA prompt_pure_vcs_info
   if [[ -n $prompt_pure_vcs_info[branch] ]]; then
@@ -171,7 +174,7 @@ prompt_pure_precmd() {
   prompt_pure_cmd_timestamp=
 
   # shows the full path in the title
-  prompt_pure_set_title 'expand-prompt' '%~'
+  prompt_pure_set_title 'expand-prompt' ''
 
   # preform async git dirty check and fetch
   prompt_pure_async_tasks

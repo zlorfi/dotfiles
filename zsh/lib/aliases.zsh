@@ -9,7 +9,7 @@ alias m='macvim'
 
 alias bb='brew update && brew outdated'
 
-alias yy='youtube-dl -f22 -t'
+alias yy='youtube-dl -f22'
 
 # Rails
 alias bx='bundle exec'
