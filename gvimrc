@@ -1,6 +1,6 @@
 " Copy to ~/.gvimrc or ~/_gvimrc.
 
-set guifont=Source\ Code\ Pro\ for\ Powerline:h14 "make sure to escape the spaces in the name properly
+set guifont=Source\ Code\ Pro\ for\ Powerline:h16 "make sure to escape the spaces in the name properly
 " set guifont=Source\ Code\ Pro:h16
 set antialias                     " MacVim: smooth fonts.
 set encoding=utf-8                " Use UTF-8 everywhere.
@@ -15,7 +15,6 @@ set fuoptions=maxvert,maxhorz
 set transp=1
 " let g:molokai_original = 1
 " colorscheme molokai
-set background=light
 colorscheme solarized
 
 "set cmdheight=2

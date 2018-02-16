@@ -1,9 +1,10 @@
-active ~/Documents/workspace_active
-archive ~/Documents/workspace_archive
 dl ~/Downloads
 dotfiles ~/dotfiles
 Downloads ~/Downloads
 dropbox ~/Dropbox
-private ~/Documents/workspace_private
 root ~/
+tm ~/Documents/workspace_tm
 
+active ~/Documents/workspace_active
+archive ~/Documents/workspace_archive
+private ~/Documents/workspace_private
