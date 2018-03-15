@@ -17,3 +17,4 @@ alias bx='bundle exec'
 # jump to workspace_ruby
 alias wa='cd $HOME/Documents/workspace_active/'
 alias waa='cd $HOME/Documents/workspace_archive/'
+alias wtm='cd $HOME/Documents/workspace_tm/'
