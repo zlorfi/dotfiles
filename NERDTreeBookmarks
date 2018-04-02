@@ -1,10 +1,10 @@
 dl ~/Downloads
 dotfiles ~/dotfiles
 Downloads ~/Downloads
-dropbox ~/Dropbox
 root ~/
 tm ~/Documents/workspace_tm
 
+dropbox ~/Dropbox
 active ~/Documents/workspace_active
 archive ~/Documents/workspace_archive
 private ~/Documents/workspace_private
