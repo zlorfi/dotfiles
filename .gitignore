@@ -5,3 +5,4 @@ tmp*
 vim/bundle/*
 vim/autoload/*
 zsh/lib/aws.zsh
+fish/fishd.*
