@@ -15,8 +15,7 @@ set HOMEBREW_NO_ANALYTICS 1
 set DISABLE_SPRING 1
 
 # setting ulimits
-# ulimit -Hn 2048
-# ulimit -Sn 2048
+ulimit -n 2048
 
 # set abbveriations
 if status --is-interactive
@@ -41,6 +40,7 @@ if status --is-interactive
     abbr --add glg 'git log --stat --max-count=5'
     abbr --add bb 'brew update; and brew outdated'
     abbr --add bx 'bundle exec'
+    abbr --add cloud 'cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 end
 
 # disable login greeting
