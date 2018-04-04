@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # some variables
-_zsh_file="/usr/local/bin/zsh"
+_fish_shell="/usr/local/bin/fish"
 _homebrew=`which brew`
-_to_install="the_silver_searcher imagemagick mongodb postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl zsh elixir git vim --with-override-system-vi ag fish"
+_to_install="the_silver_searcher imagemagick postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl elixir git vim --with-override-system-vi fish"
 
 # Generate symlinks for files
-for i in gemrc gitconfig gitignore gvimrc irbrc mongorc.js NERDTreeBookmarks rspec screenrc tmux.conf vimrc zshrc rubocop.yml spacemacs
+for i in gemrc gitconfig gitignore gvimrc irbrc mongorc.js NERDTreeBookmarks rspec screenrc tmux.conf vimrc rubocop.yml spacemacs
 do
   if [ ! -f $HOME/.$i ]
   then
@@ -16,21 +16,32 @@ do
   fi
 done
 
-for j in vim zsh
-do
-  if [ ! -d $HOME/.$j ]
-  then
-    ln -s $HOME/dotfiles/$j $HOME/.$j
-  else
-    echo "Symlink $HOME/.$j already exists"
-  fi
-done
+if [ ! -d $HOME/.vim ]
+then
+  ln -s $HOME/dotfiles/vim $HOME/.vim
+else
+  echo "Symlink $HOME/.vim already exists"
+fi
 
 if [ ! -d $HOME/.vim/tmp ]
 then
   mkdir $HOME/.vim/tmp
 else
   echo "tmp folder $HOME/.vim/tmp already exists"
+fi
+
+if [ ! -d $HOME/.config]
+then
+    mkdir -p $HOME/.config
+else
+    echo "fish folder $HOME/.config already exists"
+fi
+
+if [ ! -d $HOME/.config/fish ]
+then
+    ln -s $HOME/dotfiles/fish $HOME/.config/fish
+else
+    echo "Symlink $HOME/.config/fish already exists"
 fi
 
 # install Homebrew
@@ -49,21 +60,21 @@ else
   echo "Homebrew not installed"
 fi
 
-# check if $SHELL is already set to ZSH
-if [ "$(echo $SHELL)" != "$_zsh_file" ]
+# check if $SHELL is already set to fish shell
+if [ "$(echo $SHELL)" != "$_fish_shell" ]
 then
-  if [ -f $zsh_file ]
+  if [ -f $_fish_shell ]
   then
     echo
-    echo "Changing shell to ZSH, need sudo password"
+    echo "Changing shell to fish, need sudo password"
     echo
-    echo $_zsh_file | sudo tee -a /etc/shells;
-    chsh -s $_zsh_file;
+    echo $_fish_shell | sudo tee -a /etc/shells;
+    chsh -s $_fish_shell;
   else
     echo
-    echo "Install ZSH via Homebrew first!"
+    echo "Install fish via Homebrew first!"
     echo
   fi
 else
-  echo "ZSH already installed"
+  echo "fish shell already installed"
 fi
