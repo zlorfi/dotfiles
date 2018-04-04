@@ -2,8 +2,8 @@
 set -U EDITOR vim
 
 # setting PATH for rbenv
-set PATH /usr/local/var/rbenv/shims $PATH
-# status --is-interactive; and source (rbenv init -|psub)
+# set PATH /usr/local/var/rbenv/shims $PATH
+status --is-interactive; and source (rbenv init -|psub)
 
 # setting elixir sepcific stuff
 set ERL_AFLAGS "-kernel shell_history enabled"
@@ -16,6 +16,10 @@ set DISABLE_SPRING 1
 
 # setting ulimits
 ulimit -n 2048
+
+# grep options
+set GREP_OPTIONS '--color=auto'
+set GREP_COLOR '1;32'
 
 # set abbveriations
 if status --is-interactive
@@ -40,6 +44,8 @@ if status --is-interactive
     abbr --add glg 'git log --stat --max-count=5'
     abbr --add bb 'brew update; and brew outdated'
     abbr --add bx 'bundle exec'
+    abbr --add bxrc 'bundle exec rails c'
+    abbr --add bxrs 'bundle exec rails s'
     abbr --add cloud 'cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 end
 
