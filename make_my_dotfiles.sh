@@ -39,7 +39,7 @@ fi
 
 if [ ! -d $HOME/.config/fish ]
 then
-    ln -s $HOME/dotfiles/fish $HOME/.config/fish
+    ln -s $HOME/dotfiles/fish $HOME/.config
 else
     echo "Symlink $HOME/.config/fish already exists"
 fi
