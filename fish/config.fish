@@ -26,15 +26,13 @@ if status --is-interactive
     set -g fish_user_abbreviations
     abbr --add wtm 'cd ~/Documents/workspace_tm'
     abbr --add gst 'git status'
-    abbr --add gst 'git status'
-    abbr --add gst 'git status'
-    abbr --add gst 'git status'
-    abbr --add gst 'git status'
+    abbr --add gd 'git diff'
     abbr --add ga 'git add .'
     abbr --add gl 'git pull'
     abbr --add gup 'git fetch && git rebase'
     abbr --add gp 'git push'
     abbr --add gc 'git commit -v'
+    abbr --add gc! 'git commit --amend'
     abbr --add gca 'git commit -v -a'
     abbr --add gco 'git checkout'
     abbr --add gb 'git branch'
@@ -47,6 +45,7 @@ if status --is-interactive
     abbr --add bxrc 'bundle exec rails c'
     abbr --add bxrs 'bundle exec rails s'
     abbr --add cloud 'cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+    abbr --add gdiff "git log --graph --pretty=format:'%Cred%h%Creset - %s %Creset' --abbrev-commit production..staging2"
 end
 
 # disable login greeting
