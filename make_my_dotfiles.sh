@@ -3,7 +3,7 @@
 # some variables
 _fish_shell="/usr/local/bin/fish"
 _homebrew=`which brew`
-_to_install="the_silver_searcher imagemagick postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl elixir git vim --with-override-system-vi fish"
+_to_install="the_silver_searcher imagemagick postgresql rbenv redis ruby-build tmux unrar yasm youtube-dl elixir git git-flow vim --with-override-system-vi fish"
 
 # Generate symlinks for files
 for i in gemrc gitconfig gitignore gvimrc irbrc mongorc.js NERDTreeBookmarks rspec screenrc tmux.conf vimrc rubocop.yml spacemacs

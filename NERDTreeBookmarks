@@ -3,8 +3,8 @@ dotfiles ~/dotfiles
 Downloads ~/Downloads
 root ~/
 tm ~/Documents/workspace_tm
+private ~/Documents/workspace_private
 
 dropbox ~/Dropbox
 active ~/Documents/workspace_active
 archive ~/Documents/workspace_archive
-private ~/Documents/workspace_private
