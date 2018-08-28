@@ -227,6 +227,7 @@ map <leader>m :silent !open -a Marked.app '%:p'<cr>
 map <leader>p :bp<cr> " \p previous buffer
 map <leader>n :bn<cr> " \n next buffer
 map <leader>d :bd<cr> " \d delete buffer
+map <leader>b :buffers<cr>:buffer<Space>
 
 " swap word with next word
 nmap <silent> gw    "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr><c-o><c-l>
