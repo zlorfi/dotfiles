@@ -25,6 +25,7 @@ set GREP_COLOR '1;32'
 if status --is-interactive
     set -g fish_user_abbreviations
     abbr --add wtm 'cd ~/Documents/workspace_tm'
+    abbr --add obc 'cd ~/Documents/workspace_tm/obc'
     abbr --add gst 'git status'
     abbr --add gd 'git diff'
     abbr --add ga 'git add .'
@@ -50,3 +51,4 @@ end
 
 # disable login greeting
 set fish_greeting ''
+set -g fish_user_paths "/usr/local/opt/mysql@5.5/bin" $fish_user_paths

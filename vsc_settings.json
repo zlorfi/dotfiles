@@ -1,0 +1,24 @@
+{
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "git.autofetch": true,
+    "telemetry.optout": true,
+    "github.hosts": [
+        {
+            "host": "https://github.com",
+            "username": "oauth",
+            "token": "system"
+        }
+    ],
+    "editor.fontSize": 16,
+    "editor.fontFamily": "Source Code Pro for Powerline",
+    "ruby.useBundler": true,
+    "ruby.format": "rubocop",
+    "workbench.iconTheme": null,
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.tabSize": 2,
+    "git.path": "/usr/local/bin/git",
+    "workbench.statusBar.feedback.visible": false
+}
