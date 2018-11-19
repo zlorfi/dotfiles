@@ -21,6 +21,10 @@ ulimit -n 2048
 set GREP_OPTIONS '--color=auto'
 set GREP_COLOR '1;32'
 
+# setting locale
+ set -x LC_ALL 'en_US.UTF-8'
+ set -x LANG 'en_US.UTF-8'
+
 # set abbveriations
 if status --is-interactive
     set -g fish_user_abbreviations
@@ -46,7 +50,6 @@ if status --is-interactive
     abbr --add bxrc 'bundle exec rails c'
     abbr --add bxrs 'bundle exec rails s'
     abbr --add cloud 'cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
-    abbr --add gdiff "git log --graph --pretty=format:'%Cred%h%Creset - %s %Creset' --abbrev-commit production..staging2"
 end
 
 # disable login greeting
