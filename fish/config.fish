@@ -1,5 +1,5 @@
 # setting defualt editor
-set -U EDITOR vim
+set EDITOR vim
 
 # setting PATH for rbenv
 # set PATH /usr/local/var/rbenv/shims $PATH
@@ -22,14 +22,21 @@ set GREP_OPTIONS '--color=auto'
 set GREP_COLOR '1;32'
 
 # setting locale
- set -x LC_ALL 'en_US.UTF-8'
- set -x LANG 'en_US.UTF-8'
+set -x LC_ALL 'en_US.UTF-8'
+set -x LANG 'en_US.UTF-8'
+
+# define GOPATH
+set -x -U GOPATH $HOME/Documents/workspace_go
+
+# setting GPG
+set GPG_TTY /dev/ttys001
 
 # set abbveriations
 if status --is-interactive
     set -g fish_user_abbreviations
     abbr --add wtm 'cd ~/Documents/workspace_tm'
     abbr --add obc 'cd ~/Documents/workspace_tm/obc'
+    abbr --add tix 'cd ~/Documents/workspace_tm/amadeus_api/'
     abbr --add gst 'git status'
     abbr --add gd 'git diff'
     abbr --add ga 'git add .'
@@ -55,3 +62,4 @@ end
 # disable login greeting
 set fish_greeting ''
 set -g fish_user_paths "/usr/local/opt/mysql@5.5/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/node@10/bin" $fish_user_paths

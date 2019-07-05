@@ -1,7 +1,6 @@
 {
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "workbench.colorTheme": "Visual Studio Dark",
     "git.autofetch": true,
     "editor.fontSize": 16,
     "editor.fontFamily": "Source Code Pro for Powerline",
@@ -14,12 +13,9 @@
     "git.path": "/usr/local/bin/git",
     "workbench.statusBar.feedback.visible": false,
     "githubPullRequests.telemetry.enabled": false,
-    "githubPullRequests.hosts": [
-        {
-            "host": "https://github.com",
-            "username": "oauth",
-            "token": "system"
-        }
-    ],
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "breadcrumbs.enabled": true,
+    "workbench.colorTheme": "One Dark Pro Vivid",
+    "extensions.ignoreRecommendations": false,
+    "window.zoomLevel": 0
 }

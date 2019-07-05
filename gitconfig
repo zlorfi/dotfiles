@@ -1,12 +1,13 @@
 [user]
-  name = Michael Skrynski
-  email = zlorfi@gmail.com
+	name = Michael Skrynski
+	email = zlorfi@gmail.com
+	signingkey = 555B96D159FC1BB5
 [push]
   default = simple
 [pull]
   rebase = true
 [core]
-  excludesfile = /Users/michi/.gitignore
+	excludesfile = /Users/michi/.gitignore
   editor = 'vim'
 [branch]
   autosetuprebase = always
@@ -14,3 +15,13 @@
   ui = auto
 [diff]
   tool = vimdiff
+[gpg]
+	program = gpg2
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/michi/.stCommitMsg
