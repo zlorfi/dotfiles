@@ -6,7 +6,6 @@
     "editor.fontFamily": "Source Code Pro for Powerline",
     "ruby.useBundler": true,
     "ruby.format": "rubocop",
-    "workbench.iconTheme": null,
     "editor.autoClosingBrackets": "always",
     "editor.autoClosingQuotes": "always",
     "editor.tabSize": 2,

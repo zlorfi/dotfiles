@@ -61,5 +61,6 @@ end
 
 # disable login greeting
 set fish_greeting ''
-set -g fish_user_paths "/usr/local/opt/mysql@5.5/bin" $fish_user_paths
+
 set -g fish_user_paths "/usr/local/opt/node@10/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
