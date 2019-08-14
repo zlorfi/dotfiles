@@ -16,5 +16,6 @@
     "breadcrumbs.enabled": true,
     "workbench.colorTheme": "One Dark Pro Vivid",
     "extensions.ignoreRecommendations": false,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "workbench.iconTheme": null
 }
