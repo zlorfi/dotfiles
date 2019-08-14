@@ -62,5 +62,8 @@ end
 # disable login greeting
 set fish_greeting ''
 
-set -g fish_user_paths "/usr/local/opt/node@10/bin" $fish_user_paths
+# set -g fish_user_paths "/usr/local/opt/node@10/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+
+# add kitty support
+kitty + complete setup fish | source
