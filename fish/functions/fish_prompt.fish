@@ -10,6 +10,10 @@ function _rb_prompt
   echo (rbenv version | awk '{print $1}')
 end
 
+function _kb_context
+  echo (kubectl config current-context | awk '{print $1}')
+end
+
 function fish_prompt
   set -l cyan (set_color -o cyan)
   set -l magenta (set_color -o magenta)
@@ -22,18 +26,22 @@ function fish_prompt
   # set -l arrow "$red↪ $normal"
   set -l cwd $cyan(pwd|sed "s=$HOME=~=")
 
-  set -l ruby_version $magenta(_rb_prompt)
-  set -l ruby_version "$ruby_version$normal in "
+  if [ (_kb_context) ]
+    set -l kb_context $yellow(_kb_context)
+    set kube_context "|$kb_context"
+  end
 
+  set -l ruby_version $magenta(_rb_prompt)
+  set -l ruby_version "[$ruby_version$normal$kube_context$normal] in "
 
   if [ (_git_branch_name) ]
-  set -l git_branch $red(_git_branch_name)
-  set git_info "$normal on $blue$git_branch$blue"
+    set -l git_branch $red(_git_branch_name)
+    set git_info "$normal on $blue$git_branch$blue"
 
-  if [ (_is_git_dirty) ]
-    set -l dirty "$yellow ✗"
-    set git_info "$git_info$dirty"
-  end
+    if [ (_is_git_dirty) ]
+      set -l dirty "$yellow ✗"
+      set git_info "$git_info$dirty"
+    end
   end
 
   echo -s $ruby_version $cwd $git_info $normal \n $arrow " "

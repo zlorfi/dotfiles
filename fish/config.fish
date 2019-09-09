@@ -66,4 +66,4 @@ set fish_greeting ''
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 # add kitty support
-kitty + complete setup fish | source
+# kitty + complete setup fish | source
