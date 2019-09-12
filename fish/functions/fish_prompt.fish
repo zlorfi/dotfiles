@@ -11,7 +11,10 @@ function _rb_prompt
 end
 
 function _kb_context
-  echo (kubectl config current-context | awk '{print $1}')
+  kubectl config current-context 2> /dev/null
+  if [ (test $status -eq 0) ]
+    echo (kubectl config current-context | awk '{print $1}')
+  end
 end
 
 function fish_prompt
