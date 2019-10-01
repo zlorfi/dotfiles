@@ -57,6 +57,8 @@ if status --is-interactive
     abbr --add bxrc 'bundle exec rails c'
     abbr --add bxrs 'bundle exec rails s'
     abbr --add cloud 'cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+    abbr --add pg_start 'pg_ctl -D /usr/local/var/postgresql@9.5 start'
+    abbr --add pg_stop 'pg_ctl -D /usr/local/var/postgresql@9.5 stop'
 end
 
 # disable login greeting
@@ -67,4 +69,4 @@ set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 # add kitty support
 # kitty + complete setup fish | source
-# set -g fish_user_paths "/usr/local/opt/postgresql@9.5/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/postgresql@9.5/bin" $fish_user_paths

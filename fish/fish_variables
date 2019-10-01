@@ -7,6 +7,7 @@ SETUVAR --export LC_ALL:en_US\x2eUTF\x2d8
 SETUVAR __fish_classic_git_prompt_initialized:\x1d
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
+SETUVAR __fish_init_3_x:\x1d
 SETUVAR _fish_abbr_bb:brew\x20update\x3b\x20and\x20brew\x20outdated
 SETUVAR _fish_abbr_bx:bundle\x20exec
 SETUVAR _fish_abbr_bxrc:bundle\x20exec\x20rails\x20c
@@ -28,6 +29,8 @@ SETUVAR _fish_abbr_gp:git\x20push
 SETUVAR _fish_abbr_gst:git\x20status
 SETUVAR _fish_abbr_gup:git\x20fetch\x20\x26\x26\x20git\x20rebase
 SETUVAR _fish_abbr_obc:cd\x20\x7e/Documents/workspace_tm/obc
+SETUVAR _fish_abbr_pg__start:pg_ctl\x20\x2dD\x20/usr/local/var/postgresql\x409\x2e5\x20start
+SETUVAR _fish_abbr_pg__stop:pg_ctl\x20\x2dD\x20/usr/local/var/postgresql\x409\x2e5\x20stop
 SETUVAR _fish_abbr_tix:cd\x20\x7e/Documents/workspace_tm/amadeus_api/
 SETUVAR _fish_abbr_wtm:cd\x20\x7e/Documents/workspace_tm
 SETUVAR fish_color_autosuggestion:93a1a1
@@ -59,3 +62,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_user_abbreviations:\x1d
+SETUVAR fish_user_paths:/usr/local/opt/postgresql\x409\x2e5/bin\x1e/usr/local/sbin\x1e/Users/michi/\x2efzf/bin
