@@ -23,7 +23,8 @@ call plug#begin('~/.vim/bundle')
 " Show git status in the gutter
 Plug 'airblade/vim-gitgutter'
 " Fuzzy file finder
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 " Elixir support
 Plug 'elixir-lang/vim-elixir'
 " Tab support
@@ -40,6 +41,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " Language packs
 Plug 'sheerun/vim-polyglot'
+" Add comments via gcc or gc
+Plug 'tpope/vim-commentary'
 " Wisely add 'end' in Ruby
 Plug 'tpope/vim-endwise'
 " Git wrapper
@@ -50,6 +53,16 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Linter
 " Plug 'w0rp/ale'
+" Solalized Theme
+Plug 'altercation/vim-colors-solarized'
+" Autocompletion
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 " Initialize plugin system
 call plug#end()
@@ -129,6 +142,9 @@ set title
 " No beeping.
 set visualbell
 
+" Set autocompletion on startup
+let g:deoplete#enable_at_startup = 1
+
 " Remove highlights with leader + enter
 nmap <Leader><CR> :nohlsearch<cr>
 
@@ -194,18 +210,6 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.rabl} s
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
 
-" ctrp custom ignores
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.eunit$',
-  \ 'file': '\.exe$\|\.so$\|\.dll\|\.beam$\|\.DS_Store$'
-  \ }
-let g:ctrlp_map = '<c-p>'
-
-" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-" ag is fast enough that CtrlP doesn't need to cache
-let g:ctrlp_use_caching = 0
-
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit<cr>
@@ -237,3 +241,6 @@ map <leader>F :Ack<SPACE>
 
 " bind ag(the_silver_searcher) to ack
 let g:ackprg = 'ag --vimgrep'
+
+" use fuzzy finder
+nnoremap <c-t> :GFiles -co --exclude-standard -- ':!:*.jpeg' ':!:*.jpg' ':!:*.pdf' ':!:*.png' ':!:*.svg' ':!:*.ttf' ':!:.*.woff' ':!:.*.woff2'<CR>
