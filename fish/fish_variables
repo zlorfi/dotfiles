@@ -28,6 +28,7 @@ SETUVAR _fish_abbr_glg:git\x20log\x20\x2d\x2dstat\x20\x2d\x2dmax\x2dcount\x3d5
 SETUVAR _fish_abbr_gp:git\x20push
 SETUVAR _fish_abbr_gst:git\x20status
 SETUVAR _fish_abbr_gup:git\x20fetch\x20\x26\x26\x20git\x20rebase
+SETUVAR _fish_abbr_k:kubectl
 SETUVAR _fish_abbr_obc:cd\x20\x7e/Documents/workspace_tm/obc
 SETUVAR _fish_abbr_pg__start:pg_ctl\x20\x2dD\x20/usr/local/var/postgresql\x409\x2e5\x20start
 SETUVAR _fish_abbr_pg__stop:pg_ctl\x20\x2dD\x20/usr/local/var/postgresql\x409\x2e5\x20stop
