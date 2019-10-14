@@ -59,6 +59,7 @@ if status --is-interactive
     abbr --add cloud 'cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
     abbr --add pg_start 'pg_ctl -D /usr/local/var/postgresql@9.5 start'
     abbr --add pg_stop 'pg_ctl -D /usr/local/var/postgresql@9.5 stop'
+    abbr --add k 'kubectl'
 end
 
 # disable login greeting
