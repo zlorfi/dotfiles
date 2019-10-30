@@ -3,7 +3,7 @@ zlorfi's dotfiles
 
 * copy to your ~ ($HOME)
 * create symlinks via the `make_my_dotfiles.sh` script
-* install patched `Source Code Pro` font for the `vim-airline` plugin
+* install patched [Sauce Code Pro](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete%20Mono.ttf) font for the `vim-airline` plugin
 * change the font of your default terminal app to patched `Source Code Pro`
 * download plug.vim into autoload directory `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 * launch `vim` with `vim +PlugInstall +qall` to install plugins
