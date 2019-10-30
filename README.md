@@ -7,6 +7,7 @@ zlorfi's dotfiles
 * change the font of your default terminal app to patched `Source Code Pro`
 * download plug.vim into autoload directory `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 * launch `vim` with `vim +PlugInstall +qall` to install plugins
+* copy `fish_history` to `~/.local/share/fish/`
 * MacApps to install:
   * [AppCleaner](https://freemacsoft.net/appcleaner/)
   * [Bartender 3](https://www.macbartender.com)
