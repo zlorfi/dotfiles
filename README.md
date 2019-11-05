@@ -15,6 +15,7 @@ zlorfi's dotfiles
   * [Chromium](https://download-chromium.appspot.com)
   * [Docker](https://www.docker.com/products/docker-desktop)
   * [Emacs](https://emacsformacosx.com)
+  * [Spacemacs](http://spacemacs.org/#)
   * Firefox
   * [Fork](https://git-fork.com)
   * [GPG Keychain](https://gpgtools.org)
