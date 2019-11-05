@@ -39,11 +39,11 @@ else
     echo "fish folder $HOME/.config already exists"
 fi
 
-if [ ! -d $HOME/.config/fish ]
+if [ ! -d $HOME/.config ]
 then
-    ln -s $HOME/dotfiles/fish $HOME/.config
+    ln -s $HOME/dotfiles/config $HOME/.config
 else
-    echo "Symlink $HOME/.config/fish already exists"
+    echo "Symlink $HOME/.config already exists"
 fi
 
 # install Homebrew
