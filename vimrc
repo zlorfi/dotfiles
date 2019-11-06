@@ -55,6 +55,8 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'w0rp/ale'
 " Solalized Theme
 Plug 'altercation/vim-colors-solarized'
+" Go language
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Initialize plugin system
 call plug#end()
