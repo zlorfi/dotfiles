@@ -34,6 +34,7 @@ set GPG_TTY /dev/ttys001
 # set abbveriations
 if status --is-interactive
     set -g fish_user_abbreviations
+    abbr --add wgo 'cd ~/Documents/workspace_go/src'
     abbr --add wtm 'cd ~/Documents/workspace_tm'
     abbr --add obc 'cd ~/Documents/workspace_tm/obc'
     abbr --add tix 'cd ~/Documents/workspace_tm/amadeus_api/'
