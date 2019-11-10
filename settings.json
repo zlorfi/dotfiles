@@ -1,0 +1,22 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "workbench.colorTheme": "Spacemacs - dark",
+    "window.zoomLevel": 0,
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "editor.fontSize": 16,
+    "editor.fontFamily": "SauceCodePro Nerd Font Mono",
+    "git.autofetch": true,
+    "git.autofetchPeriod": 3600,
+    "git.autoStash": true,
+    "git.enableCommitSigning": true,
+    "ruby.format": "rubocop",
+    "ruby.useBundler": true,
+    "workbench.enableExperiments": false,
+    "update.showReleaseNotes": false,
+    "files.trimTrailingWhitespace": true,
+    "extensions.ignoreRecommendations": false,
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "editor.minimap.enabled": false
+}
