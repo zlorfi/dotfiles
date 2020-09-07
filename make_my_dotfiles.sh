@@ -8,7 +8,7 @@ _to_install="the_silver_searcher imagemagick postgresql@9.5 pgcli rbenv redis ru
              azure-cli octant openssl fzf go"
 
 # Generate symlinks for files
-for i in gemrc gitconfig gitignore gvimrc irbrc mongorc.js NERDTreeBookmarks rspec screenrc tmux.conf vimrc rubocop.yml spacemacs
+for i in gemrc gitconfig gitmessage gitignore gvimrc irbrc mongorc.js NERDTreeBookmarks rspec screenrc tmux.conf vimrc rubocop.yml spacemacs
 do
   if [ ! -f $HOME/.$i ]
   then
