@@ -18,5 +18,8 @@
     "files.trimTrailingWhitespace": true,
     "extensions.ignoreRecommendations": false,
     "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.tabSize": 2,
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }

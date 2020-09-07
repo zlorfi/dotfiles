@@ -72,3 +72,4 @@ set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 # add kitty support
 # kitty + complete setup fish | source
 set -g fish_user_paths "/usr/local/opt/postgresql@9.5/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/imagemagick@6/bin" $fish_user_paths
