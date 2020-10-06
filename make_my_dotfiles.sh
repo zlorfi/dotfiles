@@ -5,7 +5,7 @@ _fish_shell="/usr/local/bin/fish"
 _homebrew=`which brew`
 _to_install="the_silver_searcher imagemagick postgresql@9.5 pgcli rbenv redis ruby-build \
              tmux unrar yasm youtube-dl elixir git git-flow vim fish emacs node yarn \
-             azure-cli octant openssl fzf go"
+             azure-cli octant openssl fzf kubectl"
 
 # Generate symlinks for files
 for i in gemrc gitconfig gitmessage gitignore gvimrc irbrc mongorc.js NERDTreeBookmarks rspec screenrc tmux.conf vimrc rubocop.yml spacemacs
@@ -32,7 +32,7 @@ else
   echo "tmp folder $HOME/.vim/tmp already exists"
 fi
 
-if [ ! -d $HOME/.config]
+if [ ! -d $HOME/.config ]
 then
     mkdir -p $HOME/.config
 else
