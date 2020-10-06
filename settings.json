@@ -21,5 +21,6 @@
     "editor.minimap.enabled": false,
     "explorer.confirmDragAndDrop": false,
     "editor.tabSize": 2,
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "scm.defaultViewMode": "tree"
 }
