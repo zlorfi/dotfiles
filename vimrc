@@ -72,7 +72,8 @@ colorscheme solarized
 set shell=/bin/bash
 
 " Map <Leader>
-let mapleader = "_"
+nnoremap <SPACE> <Nop>
+let mapleader = " "
 
 " Add line numbers
 set number
@@ -212,6 +213,15 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove<cr>
+" split window navigation
+map <leader>ws :sp<cr>
+map <leader>w/ :vsp<cr>
+map <leader>w= <C-W>=<cr>
+map <leader>wd <C-W>q<cr>
+map <leader>w<up> <C-W>k<cr>
+map <leader>w<down> <C-W>j<cr>
+map <leader>w<right> <C-W>l<cr>
+map <leader>w<left> <C-W>h<cr>
 map <leader>ll :NERDTreeToggle<cr>
 " no <cr> at the end to be able to submit bookmark
 map <leader>lo :NERDTree<SPACE>
