@@ -34,7 +34,7 @@ Plug 'jiangmiao/auto-pairs'
 " Undo
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 " Search with ack
-Plug 'mileszs/ack.vim'
+Plug 'dyng/ctrlsf.vim'
 " Comment function
 Plug 'scrooloose/nerdcommenter'
 " Filebrowser, load on first invocation of 'NERDTreeToggle'
@@ -59,8 +59,6 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-" Better buffer browser
-Plug 'jeetsukumaran/vim-buffergator'
 
 " Initialize plugin system
 call plug#end()
@@ -244,11 +242,17 @@ map <leader>b :buffers<cr>:buffer<Space>
 " swap word with next word
 nmap <silent> gw    "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr><c-o><c-l>
 
-" map F to recursive search
-map <leader>F :Ack<SPACE>
-
 " bind ag(the_silver_searcher) to ack
 let g:ackprg = 'ag --vimgrep'
+
+" ctrlsf.vim plugin options
+nmap     <leader>f <Plug>CtrlSFPrompt
+vmap     <leader>F <Plug>CtrlSFVwordExec
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+let g:ctrlsf_position = 'bottom'
+let g:ctrlsf_winsize = '30%'
+let g:ctrlsf_auto_focus = { "at": "done", "duration_less_than": 2000 }
 
 " use fuzzy finder
 nnoremap <c-t> :GFiles -co --exclude-standard -- ':!:*.jpeg' ':!:*.jpg' ':!:*.pdf' ':!:*.png' ':!:*.svg' ':!:*.ttf' ':!:.*.woff' ':!:.*.woff2'<CR>
