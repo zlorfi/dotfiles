@@ -59,6 +59,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+" Better buffer browser
+Plug 'jeetsukumaran/vim-buffergator'
 
 " Initialize plugin system
 call plug#end()
@@ -222,17 +224,16 @@ map <leader>ws :sp<cr>
 map <leader>w/ :vsp<cr>
 " equalize all window sizes
 map <leader>w= <C-W>=<cr>
-map <leader>wd <C-W><C-Q><cr>
+map <leader>wd <C-W>c<cr>
 map <leader>w<up> <C-W><C-K><cr>
 map <leader>w<down> <C-W><C-J><cr>
 map <leader>w<right> <C-W><C-L><cr>
 map <leader>w<left> <C-W><C-H><cr>
 map <leader>ll :NERDTreeToggle<cr>
+map <leader>ww :NERDTreeFocus<cr>
 " no <cr> at the end to be able to submit bookmark
 map <leader>lo :NERDTree<SPACE>
 map <leader>_ :UndotreeToggle<cr>
-" Marked.app is an Markdown interpreter on MacOS
-map <leader>m :silent !open -a Marked.app '%:p'<cr>
 
 " Buffer switching
 map <leader>p :bp<cr> " \p previous buffer
