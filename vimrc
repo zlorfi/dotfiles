@@ -52,6 +52,7 @@ Plug 'vim-airline/vim-airline'
 " Statusline themes
 Plug 'vim-airline/vim-airline-themes'
 " Linter
+Plug 'dense-analysis/ale'
 " Plug 'w0rp/ale'
 " Solalized Theme
 Plug 'altercation/vim-colors-solarized'
@@ -233,11 +234,8 @@ map <leader>ww :NERDTreeFocus<cr>
 map <leader>lo :NERDTree<SPACE>
 map <leader>_ :UndotreeToggle<cr>
 
-" Buffer switching
-map <leader>p :bp<cr> " \p previous buffer
-map <leader>n :bn<cr> " \n next buffer
-map <leader>d :bd<cr> " \d delete buffer
-map <leader>b :buffers<cr>:buffer<Space>
+" Buffer switching with fzf
+map <leader>b :Buffer<cr>
 
 " swap word with next word
 nmap <silent> gw    "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr><c-o><c-l>
