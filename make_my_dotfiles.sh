@@ -4,7 +4,7 @@
 _fish_shell="/usr/local/bin/fish"
 _homebrew=`which brew`
 _to_install="the_silver_searcher imagemagick postgresql@9.5 pgcli rbenv redis ruby-build \
-             tmux unrar yasm youtube-dl elixir git git-flow vim fish emacs node yarn \
+             tmux yasm youtube-dl elixir git git-flow vim fish emacs node yarn \
              azure-cli octant openssl fzf kubectl"
 
 # Generate symlinks for files
