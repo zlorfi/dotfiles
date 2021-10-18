@@ -28,6 +28,11 @@ set -x LANG 'en_US.UTF-8'
 # define GOPATH
 set -x -U GOPATH $HOME/Documents/workspace_go
 
+# definde Android SDK
+set -x -U ANDROID_SDK_ROOT $HOME/Library/Android/sdk
+# set -x -U JAVA_HOME /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+# set -x -U JAVA_HOME /Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home
+
 # setting GPG
 set GPG_TTY /dev/ttys001
 
@@ -58,18 +63,18 @@ if status --is-interactive
     abbr --add bxrc 'bundle exec rails c'
     abbr --add bxrs 'bundle exec rails s'
     abbr --add cloud 'cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
-    abbr --add pg_start 'pg_ctl -D /usr/local/var/postgresql@9.5 start'
-    abbr --add pg_stop 'pg_ctl -D /usr/local/var/postgresql@9.5 stop'
+    abbr --add pg_start 'pg_ctl -D /usr/local/var/postgresql@11 start'
+    abbr --add pg_stop 'pg_ctl -D /usr/local/var/postgresql@11 stop'
     abbr --add k 'kubectl'
 end
 
 # disable login greeting
 set fish_greeting ''
 
-# set -g fish_user_paths "/usr/local/opt/node@10/bin" $fish_user_paths
+# set -g fish_user_paths "/usr/local/opt/node@14/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 # add kitty support
 # kitty + complete setup fish | source
-set -g fish_user_paths "/usr/local/opt/postgresql@9.5/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/postgresql@11/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/imagemagick@6/bin" $fish_user_paths

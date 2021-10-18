@@ -1,7 +1,9 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export ANDROID_SDK_ROOT:/Users/michi/Library/Android/sdk
 SETUVAR EDITOR:vim
 SETUVAR --export --path GOPATH:/Users/michi/Documents/workspace_go
+SETUVAR --export JAVA_HOME:/Library/Internet\x20Plug\x2dIns/JavaAppletPlugin\x2eplugin/Contents/Home
 SETUVAR --export LANG:en_US\x2eUTF\x2d8
 SETUVAR --export LC_ALL:en_US\x2eUTF\x2d8
 SETUVAR __fish_classic_git_prompt_initialized:\x1d
@@ -31,11 +33,13 @@ SETUVAR _fish_abbr_gst:git\x20status
 SETUVAR _fish_abbr_gup:git\x20fetch\x20\x26\x26\x20git\x20rebase
 SETUVAR _fish_abbr_k:kubectl
 SETUVAR _fish_abbr_obc:cd\x20\x7e/Documents/workspace_tm/obc
-SETUVAR _fish_abbr_pg__start:pg_ctl\x20\x2dD\x20/usr/local/var/postgresql\x409\x2e5\x20start
-SETUVAR _fish_abbr_pg__stop:pg_ctl\x20\x2dD\x20/usr/local/var/postgresql\x409\x2e5\x20stop
+SETUVAR _fish_abbr_pg__start:pg_ctl\x20\x2dD\x20/usr/local/var/postgresql\x4011\x20start
+SETUVAR _fish_abbr_pg__stop:pg_ctl\x20\x2dD\x20/usr/local/var/postgresql\x4011\x20stop
 SETUVAR _fish_abbr_tix:cd\x20\x7e/Documents/workspace_tm/amadeus_api/
 SETUVAR _fish_abbr_wgo:cd\x20\x7e/Documents/workspace_go/src
 SETUVAR _fish_abbr_wtm:cd\x20\x7e/Documents/workspace_tm
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/michi/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/michi/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher
 SETUVAR fish_color_autosuggestion:93a1a1
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:586e75
