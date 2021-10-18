@@ -21,7 +21,7 @@ endif
 call plug#begin('~/.vim/bundle')
 
 " Show git status in the gutter
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 " Fuzzy file finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -60,6 +60,11 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+" Autocompletion
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+let g:deoplete#enable_at_startup = 1
 
 " Initialize plugin system
 call plug#end()
@@ -113,7 +118,7 @@ set expandtab
 
 " SET Font
 " set guifont=Menlo\ Regular:h14
-set guifont=Source\ Code\ Pro\ for\ Powerline:h14 "make sure to escape the spaces in the name properly
+set guifont=SauceCodePro\ Nerd\ Font\ Mono:h14 "make sure to escape the spaces in the name properly
 
 " Show trailing spaces and highlight hard tabs
 set list listchars=tab:»·,trail:·
@@ -185,6 +190,8 @@ let g:airline#extensions#hunks#non_zero_only   =  1 " git gutter
 let g:airline#extensions#bufferline#enabled = 0
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline_section_z = '%3p%% %#__accent_bold#%4l%#__restore__#:%3v'
+let g:airline_section_x = ''
+let g:airline_section_y = ''
 " let g:airline#extensions#tabline#fnamemod = ':t'
 
 " NERDTreee show hidden files by default
@@ -233,6 +240,7 @@ map <leader>ww :NERDTreeFocus<cr>
 " no <cr> at the end to be able to submit bookmark
 map <leader>lo :NERDTree<SPACE>
 map <leader>_ :UndotreeToggle<cr>
+map <leader>t :GitFiles<cr>
 
 " Buffer switching with fzf
 map <leader>b :Buffer<cr>
@@ -242,6 +250,9 @@ nmap <silent> gw    "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr><c-o><c-l>
 
 " bind ag(the_silver_searcher) to ack
 let g:ackprg = 'ag --vimgrep'
+
+" adjust vim-signify
+set updatetime=1000
 
 " ctrlsf.vim plugin options
 nmap     <leader>f <Plug>CtrlSFPrompt
@@ -254,3 +265,13 @@ let g:ctrlsf_auto_focus = { "at": "done", "duration_less_than": 2000 }
 
 " use fuzzy finder
 nnoremap <c-t> :GFiles -co --exclude-standard -- ':!:*.jpeg' ':!:*.jpg' ':!:*.pdf' ':!:*.png' ':!:*.svg' ':!:*.ttf' ':!:.*.woff' ':!:.*.woff2'<CR>
+
+" auto complete
+function! CleverTab()
+   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+      return "\<Tab>"
+   else
+      return "\<C-N>"
+   endif
+endfunction
+inoremap <Tab> <C-R>=CleverTab()<CR>

@@ -30,3 +30,6 @@ zlorfi's dotfiles
   * [TablePlus](https://tableplus.com/download)
   * Tunnelblick
   * Visual Studio Code
+  * install fish extension manager `curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher`
+  * add bass `fisher add edc/bass`
+  * install nvm `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`

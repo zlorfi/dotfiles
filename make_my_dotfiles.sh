@@ -3,12 +3,11 @@
 # some variables
 _fish_shell="/usr/local/bin/fish"
 _homebrew=`which brew`
-_to_install="the_silver_searcher imagemagick postgresql@9.5 pgcli rbenv redis ruby-build \
-             tmux yasm youtube-dl elixir git git-flow vim fish emacs node yarn \
-             azure-cli octant openssl fzf kubectl"
+_to_install="the_silver_searcher imagemagick postgresql pgcli rbenv redis ruby-build tmux yasm youtube-dl elixir \
+             git git-flow vim fish yarn azure-cli lens openssl fzf kubectl"
 
 # Generate symlinks for files
-for i in gemrc gitconfig gitmessage gitignore gvimrc irbrc mongorc.js NERDTreeBookmarks rspec screenrc tmux.conf vimrc rubocop.yml spacemacs
+for i in gemrc gitconfig gitmessage gitignore gvimrc irbrc NERDTreeBookmarks rspec screenrc tmux.conf vimrc rubocop.yml prettierrc
 do
   if [ ! -f $HOME/.$i ]
   then
