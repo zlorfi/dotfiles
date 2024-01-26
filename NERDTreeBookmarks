@@ -1,12 +1,9 @@
 dl ~/Downloads
 dotfiles ~/dotfiles
 Downloads ~/Downloads
-root ~/
+root ~
 tm ~/Documents/workspace_tm
 obc ~/Documents/workspace_tm/obc
 private ~/Documents/workspace_private
-
-tix ~/Documents/workspace_tm/amadeus_api
-dropbox ~/Dropbox
-active ~/Documents/workspace_active
 archive ~/Documents/workspace_archive
+active ~/Documents/workspace_active
