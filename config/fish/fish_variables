@@ -1,16 +1,18 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export ANDROID_SDK_ROOT:/Users/michi/Library/Android/sdk
+SETUVAR --export ANDROID_HOME:/Users/admin/Library/Android/sdk
+SETUVAR --export ANDROID_SDK_ROOT:/Users/admin/Library/Android/sdk
 SETUVAR EDITOR:vim
-SETUVAR --export --path GOPATH:/Users/michi/Documents/workspace_go
-SETUVAR --export JAVA_HOME:/Library/Internet\x20Plug\x2dIns/JavaAppletPlugin\x2eplugin/Contents/Home
+SETUVAR --export --path GOPATH:/Users/admin/Documents/workspace_go
+SETUVAR --export JAVA_HOME:/Library/Java/JavaVirtualMachines/jdk\x2d11\x2ejdk/Contents/Home/
 SETUVAR --export LANG:en_US\x2eUTF\x2d8
 SETUVAR --export LC_ALL:en_US\x2eUTF\x2d8
+SETUVAR XDG_CONFIG_HOME:/Users/admin/\x2econfig
 SETUVAR __fish_classic_git_prompt_initialized:\x1d
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_bb:brew\x20update\x3b\x20and\x20brew\x20outdated
 SETUVAR _fish_abbr_bx:bundle\x20exec
 SETUVAR _fish_abbr_bxrc:bundle\x20exec\x20rails\x20c
@@ -38,8 +40,11 @@ SETUVAR _fish_abbr_pg__stop:pg_ctl\x20\x2dD\x20/usr/local/var/postgresql\x4011\x
 SETUVAR _fish_abbr_tix:cd\x20\x7e/Documents/workspace_tm/amadeus_api/
 SETUVAR _fish_abbr_wgo:cd\x20\x7e/Documents/workspace_go/src
 SETUVAR _fish_abbr_wtm:cd\x20\x7e/Documents/workspace_tm
-SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/michi/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/michi/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher
+SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eedc/bass\x1ejorgebucaran/nvm\x2efish
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:93a1a1
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:586e75
@@ -69,5 +74,8 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_user_abbreviations:\x1d
-SETUVAR fish_user_paths:/usr/local/opt/postgresql\x409\x2e5/bin\x1e/usr/local/sbin\x1e/Users/michi/\x2efzf/bin
+SETUVAR fish_user_paths:/opt/homebrew/opt/postgresql\x4011/bin\x1e/usr/local/opt/imagemagick\x406/bin\x1e/usr/local/opt/postgresql\x4011/bin\x1e/usr/local/sbin\x1e/opt/homebrew/bin\x1e/usr/local/opt/postgresql\x409\x2e5/bin\x1e/Users/michi/\x2efzf/bin\x1e/opt/homebrew/opt/fzf/bin\x1e/Users/admin/\x2efzf/bin
+SETUVAR nvm_data:/Users/admin/\x2elocal/share/nvm
+SETUVAR nvm_mirror:https\x3a//nodejs\x2eorg/dist

@@ -60,12 +60,12 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'Quramy/vim-js-pretty-template'
 " Autocompletion
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 let g:deoplete#enable_at_startup = 1
-
 " Initialize plugin system
 call plug#end()
 

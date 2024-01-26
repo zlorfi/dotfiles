@@ -1,6 +1,10 @@
 # setting defualt editor
 set EDITOR vim
 
+# add brew binaried
+fish_add_path /opt/homebrew/opt/postgresql@11/bin
+fish_add_path /opt/homebrew/bin
+
 # setting PATH for rbenv
 # set PATH /usr/local/var/rbenv/shims $PATH
 status --is-interactive; and source (rbenv init -|psub)
@@ -30,11 +34,15 @@ set -x -U GOPATH $HOME/Documents/workspace_go
 
 # definde Android SDK
 set -x -U ANDROID_SDK_ROOT $HOME/Library/Android/sdk
+set -x -U ANDROID_HOME $HOME/Library/Android/sdk
 # set -x -U JAVA_HOME /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
-# set -x -U JAVA_HOME /Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home
+set -x -U JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/
 
 # setting GPG
 set GPG_TTY /dev/ttys001
+
+# set home
+set -q XDG_CONFIG_HOME || set -U XDG_CONFIG_HOME $HOME/.config
 
 # set abbveriations
 if status --is-interactive
@@ -78,3 +86,4 @@ set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 # kitty + complete setup fish | source
 set -g fish_user_paths "/usr/local/opt/postgresql@11/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/imagemagick@6/bin" $fish_user_paths
+

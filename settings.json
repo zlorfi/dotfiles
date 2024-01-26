@@ -1,56 +1,55 @@
 {
-    "go.formatTool": "goimports",
-    "go.useLanguageServer": true,
-    "editor.fontSize": 16,
-    "editor.fontFamily": "\"cascadia code\"",
-    "git.autofetch": true,
-    "git.autofetchPeriod": 3600,
-    "git.autoStash": true,
-    "git.enableCommitSigning": true,
-    "ruby.format": "rubocop",
-    "ruby.useBundler": true,
-    "workbench.enableExperiments": false,
-    "update.showReleaseNotes": false,
-    "files.trimTrailingWhitespace": true,
-    "extensions.ignoreRecommendations": false,
-    "explorer.confirmDragAndDrop": false,
-    "editor.tabSize": 2,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "scm.defaultViewMode": "tree",
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "XXX",
-        "[ ]",
-        "[x]"
-    ],
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "workbench.editor.untitled.hint": "hidden",
-    "explorer.confirmDelete": false,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "editor.formatOnSave": true,
-    "auto-close-tag.disableOnLanguage": [
-      "typescript"
-    ],
-    "workbench.colorTheme": "One Dark Pro",
-    "editor.fontLigatures": true,
-    "window.title": "${activeEditorMedium}${separator}${rootName}",
-    "editor.minimap.enabled": false,
-    "telemetry.telemetryLevel": "off",
-    "terminal.integrated.defaultProfile.osx": "fish",
-    "breadcrumbs.enabled": false,
-    "workbench.sideBar.location": "right",
-    "prettier.useTabs": true,
-    "editor.scrollBeyondLastLine": false,
-    "editor.smoothScrolling": true,
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true,
+  "editor.fontSize": 16,
+  "editor.fontFamily": "\"cascadia code\"",
+  "git.autofetch": true,
+  "git.autofetchPeriod": 3600,
+  "git.autoStash": true,
+  "git.enableCommitSigning": true,
+  "ruby.format": "rubocop",
+  "ruby.useBundler": true,
+  "workbench.enableExperiments": false,
+  "update.showReleaseNotes": false,
+  "files.trimTrailingWhitespace": true,
+  "extensions.ignoreRecommendations": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.tabSize": 2,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "scm.defaultViewMode": "tree",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editor.untitled.hint": "hidden",
+  "explorer.confirmDelete": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "auto-close-tag.disableOnLanguage": ["typescript"],
+  "workbench.colorTheme": "One Dark Pro Flat",
+  "editor.fontLigatures": true,
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "editor.minimap.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "workbench.sideBar.location": "right",
+  "prettier.useTabs": true,
+  "editor.scrollBeyondLastLine": false,
+  "editor.smoothScrolling": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[c]": {
+    "editor.formatOnSave": false
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  },
+  "workbench.startupEditor": "none",
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "editor.accessibilitySupport": "off",
+  "npm.keybindingsChangedWarningShown": true
 }
