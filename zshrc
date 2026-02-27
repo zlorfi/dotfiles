@@ -205,3 +205,6 @@ export PATH=/Users/michi/.opencode/bin:$PATH
 # Added by `rbenv init` on Mon Feb  9 15:10:39 CET 2026
 eval "$(rbenv init - --no-rehash zsh)"
 export PATH="$HOME/.local/bin:$PATH"
+
+# load secrets from .zsh_secrets
+[[ -f ~/.zsh_secrets ]] && source ~/.zsh_secrets

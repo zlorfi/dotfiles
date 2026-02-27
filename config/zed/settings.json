@@ -1,2 +1,87 @@
-{"disable_ai": true, "edit_predictions": {"provider":"none"}, "git_panel":{"status_style":"icon","default_width":360},"tabs":{"git_status":false},"vim_mode":true,"title_bar":{"show_sign_in":false},"outline_panel":{"button":false},"collaboration_panel":{"button":false},"notification_panel":{"button":false},"agent":{"tool_permissions": {"default":"allow"}, "default_profile":"write","default_model":{"provider":"anthropic","model":"claude-haiku-4-5-thinking-latest"},"commit_message_model":{"provider":"LiteLLM","model":"gpt-5-nano"},"model_parameters":[]},"language_models":{"openai_compatible":{"LiteLLM":{"api_url":"http://192.168.10.10:4000/v1","available_models":[{"name":"claude-haiku-4-5","max_tokens":200000,"max_output_tokens":32000,"max_completion_tokens":200000,"capabilities":{"tools":true,"images":true,"parallel_tool_calls":false,"prompt_cache_key":false}},{"name":"claude-sonnet-4-5","max_tokens":200000,"max_output_tokens":32000,"max_completion_tokens":200000,"capabilities":{"tools":true,"images":true,"parallel_tool_calls":false,"prompt_cache_key":false}},{"name":"gpt-5-nano","max_tokens":200000,"max_output_tokens":32000,"max_completion_tokens":200000,"capabilities":{"tools":true,"images":false,"parallel_tool_calls":false,"prompt_cache_key":false}}]}}},"base_keymap":"VSCode","auto_indent_on_paste":true,"tab_size":2,"icon_theme":"Zed (Default)","ui_font_size":16,"buffer_font_size":16,"theme":{"mode":"dark","light":"One Light","dark":"One Dark"},"context_servers":{"MCP_DOCKER":{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   "env": {},"enabled":true,"command":"docker","args":["mcp","gateway","run"]}}}
+{
+  "disable_ai": false,
+  "edit_predictions": { "provider": "none" },
+  "git_panel": { "status_style": "icon", "default_width": 360 },
+  "tabs": { "git_status": false },
+  "vim_mode": true,
+  "title_bar": { "show_sign_in": false },
+  "outline_panel": { "button": false },
+  "collaboration_panel": { "button": false },
+  "notification_panel": { "button": false },
+  "agent": {
+    "single_file_review": true,
+    "enable_feedback": false,
+    "tool_permissions": { "default": "allow" },
+    "default_profile": "write",
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-thinking-latest"
+    },
+    "commit_message_model": {
+      "provider": "openai_compatible.Lite LLM",
+      "model": "gpt-5-nano"
+    },
+    "model_parameters": []
+  },
+  // https://zed.dev/docs/ai/llm-providers
+  "language_models": {
+    "openai_compatible": {
+      "Lite LLM": {
+        "api_url": "http://192.168.10.10:4000/v1",
+        "available_models": [
+          {
+            "name": "claude-haiku-4-5",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false
+            }
+          },
+          {
+            "name": "claude-sonnet-4-5",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false
+            }
+          },
+          {
+            "name": "gpt-5-nano",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false
+            }
+          }
+        ]
+      }
+    }
+  },
+  "base_keymap": "VSCode",
+  "auto_indent_on_paste": true,
+  "tab_size": 2,
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": { "mode": "dark", "light": "One Light", "dark": "One Dark" },
+  "context_servers": {
+    "MCP_DOCKER": {
+      "env": {},
+      "enabled": true,
+      "command": "docker",
+      "args": ["mcp", "gateway", "run"]
+    }
+  }
+}

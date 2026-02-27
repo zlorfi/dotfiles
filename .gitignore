@@ -15,3 +15,4 @@ config/nvim/telescope_history
 config/nvim/tree-sitter-*-tmp/
 config/nvim/tree-sitter-*.tar.gz
 .claude/*
+zsh_secrets
