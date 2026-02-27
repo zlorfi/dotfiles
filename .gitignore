@@ -9,7 +9,9 @@ config/nvtop/*
 config/nvim/lazy/
 config/nvim/mason/
 config/nvim/dirsession/
+config/nvim/session/
 config/nvim/*.log
 config/nvim/telescope_history
 config/nvim/tree-sitter-*-tmp/
 config/nvim/tree-sitter-*.tar.gz
+.claude/*
