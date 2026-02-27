@@ -18,7 +18,7 @@
       "model": "claude-haiku-4-5-thinking-latest"
     },
     "commit_message_model": {
-      "provider": "openai_compatible.Lite LLM",
+      "provider": "openai_compatible.LiteLLM",
       "model": "gpt-5-nano"
     },
     "model_parameters": []
@@ -26,7 +26,7 @@
   // https://zed.dev/docs/ai/llm-providers
   "language_models": {
     "openai_compatible": {
-      "Lite LLM": {
+      "LiteLLM": {
         "api_url": "http://192.168.10.10:4000/v1",
         "available_models": [
           {
