@@ -2,7 +2,14 @@
 tmp*
 .netrwhist
 .swp
-vim/bundle/*
-vim/autoload/*
-zsh/lib/aws.zsh
 fish/fishd.*
+config/zed/*
+!config/zed/settings.json
+config/nvtop/*
+config/nvim/lazy/
+config/nvim/mason/
+config/nvim/dirsession/
+config/nvim/*.log
+config/nvim/telescope_history
+config/nvim/tree-sitter-*-tmp/
+config/nvim/tree-sitter-*.tar.gz

@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # some variables
-_fish_shell="/usr/local/bin/fish"
+_shell="/opt/homebrew/bin/zsh"
+# _shell="/opt/homebrew/bin/fish"
 _homebrew=`which brew`
-_to_install="the_silver_searcher imagemagick postgresql@11 pgcli rbenv redis ruby-build tmux yasm youtube-dl elixir \
-             git git-flow vim fish yarn azure-cli openssl fzf kubectl typst"
+_to_install="the_silver_searcher btop gh imagemagick rbenv redis ruby-build tmux yasm elixir iperf3 zsh oh-my-posh\
+             git git-flow certbot nvim yarn azure-cli openssl kubectl typst thonny k9s uv stern nvm"
 
 # Generate symlinks for files
-for i in gemrc gitconfig gitmessage gitignore gvimrc irbrc NERDTreeBookmarks rspec screenrc tmux.conf vimrc rubocop.yml prettierrc
+for i in gemrc gitconfig gitmessage gitignore gvimrc irbrc rspec screenrc tmux.conf rubocop.yml prettierrc
 do
   if [ ! -f $HOME/.$i ]
   then
@@ -62,15 +63,15 @@ else
 fi
 
 # check if $SHELL is already set to fish shell
-if [ "$(echo $SHELL)" != "$_fish_shell" ]
+if [ "$(echo $SHELL)" != "$_shell" ]
 then
-  if [ -f $_fish_shell ]
+  if [ -f $_shell ]
   then
     echo
     echo "Changing shell to fish, need sudo password"
     echo
-    echo $_fish_shell | sudo tee -a /etc/shells;
-    chsh -s $_fish_shell;
+    echo $_shell | sudo tee -a /etc/shells;
+    chsh -s $_shell;
   else
     echo
     echo "Install fish via Homebrew first!"

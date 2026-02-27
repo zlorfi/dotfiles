@@ -1,27 +1,31 @@
 [user]
 	name = Michael Skrynski
 	email = zlorfi@gmail.com
-	signingkey = 555B96D159FC1BB5
+	signingkey = 6118354B28F4080AFC815C2B555B96D159FC1BB5
 [push]
   default = simple
 [pull]
   rebase = true
 [core]
-	excludesfile = /Users/michi/.gitignore
-  editor = 'vim'
+	excludesfile = /Users/michi/.gitignore_global
+  editor = 'nvim'
 [branch]
   autosetuprebase = always
 [color]
   ui = auto
 [diff]
-  tool = vimdiff
+  tool = difftastic
+[difftool]
+  prompt = false
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"f
 [gpg]
-	program = gpg2
+	program = /opt/homebrew/bin/gpg
 [difftool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
 	template = /Users/michi/dotfiles/gitmessage

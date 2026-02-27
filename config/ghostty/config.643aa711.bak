@@ -1,0 +1,18 @@
+auto-update = check
+background-blur-radius = 20
+clipboard-paste-protection = true
+font-family = SauceCodePro NFM
+font-size = 19
+keybind = global:super+enter=toggle_quick_terminal
+macos-titlebar-proxy-icon = hidden
+mouse-hide-while-typing = true
+quick-terminal-position = center
+quick-terminal-size = 40%,55%
+shell-integration = zsh
+shell-integration-features = no-title
+theme = dark:Catppuccin Frappe,light:Catppuccin Mocha
+title = " "
+window-decoration = true
+window-height = 35
+window-new-tab-position = end
+window-width = 120
