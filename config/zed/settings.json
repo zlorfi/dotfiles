@@ -1,4 +1,9 @@
 {
+  "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    }
+  },
   "disable_ai": false,
   "edit_predictions": { "provider": "none" },
   "git_panel": { "status_style": "icon", "default_width": 360 },
@@ -14,13 +19,13 @@
     "tool_permissions": { "default": "allow" },
     "default_profile": "write",
     "default_model": {
-      "enable_thinking": true,
-      "provider": "anthropic",
-      "model": "claude-haiku-4-5-thinking-latest"
+      "provider": "LiteLLM",
+      "model": "gpt-4.1-nano"
     },
+
     "commit_message_model": {
-      "provider": "openai_compatible.LiteLLM",
-      "model": "gpt-5-nano"
+      "provider": "openai",
+      "model": "gpt-4.1-nano"
     },
     "model_parameters": []
   },
@@ -65,9 +70,30 @@
               "parallel_tool_calls": false,
               "prompt_cache_key": false
             }
+          },
+          {
+            "name": "gpt-4.1-nano",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": true
+            }
           }
         ]
       }
+    },
+    "openai": {
+      "available_models": [
+        {
+          "display_name": "gpt-4.1-nano",
+          "name": "gpt-4.1-nano",
+          "max_tokens": 128000
+        }
+      ]
     }
   },
   "base_keymap": "VSCode",
@@ -80,7 +106,7 @@
   "context_servers": {
     "MCP_DOCKER": {
       "env": {},
-      "enabled": true,
+      "enabled": false,
       "command": "docker",
       "args": ["mcp", "gateway", "run"]
     }
