@@ -17,3 +17,4 @@ config/nvim/tree-sitter-*.tar.gz
 .claude/*
 zsh_secrets
 config/cagent/*
+config/jj/repos/*
