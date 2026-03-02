@@ -3,3 +3,7 @@
 [user]
 name = "Michael Skrynski"
 email = "zlorfi@gmail.com"
+
+[ui]
+# pager = "delta"
+diff-editor = "nvim"

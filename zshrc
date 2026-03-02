@@ -180,7 +180,7 @@ export PATH="$PATH:/Users/michi/.lmstudio/bin"
 export PICO_SDK_PATH=~/pico-sdk
 export GPG_TTY=$(tty)
 export EDITOR=nvim
-export VISUAL=Neovim
+# export VISUAL=Neovim
 export PATH="/opt/homebrew/bin:$PATH"
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/michi/.docker/completions $fpath)
