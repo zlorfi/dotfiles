@@ -14,19 +14,9 @@
 [color]
   ui = auto
 [diff]
-  tool = difftastic
-[difftool]
-  prompt = false
-[difftool "difftastic"]
-  cmd = difft "$LOCAL" "$REMOTE"f
+  external = difft
 [gpg]
 	program = /opt/homebrew/bin/gpg
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [commit]
 	template = /Users/michi/dotfiles/gitmessage
 [filter "lfs"]

@@ -6,4 +6,5 @@ email = "zlorfi@gmail.com"
 
 [ui]
 # pager = "delta"
-diff-editor = "nvim"
+# diff-editor = "nvim"
+diff-formatter = ["difft", "--color=always", "$left", "$right"]
