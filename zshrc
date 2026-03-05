@@ -117,6 +117,7 @@ if [[ $- == *i* ]]; then
   alias gcount='git shortlog -sn'
   alias gcp='git cherry-pick'
   alias glg='git log --stat --max-count=5'
+  alias lg='lazygit'
 
   # Misc
   alias bb='brew update && brew outdated'
