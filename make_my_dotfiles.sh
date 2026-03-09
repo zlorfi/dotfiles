@@ -8,7 +8,7 @@ _to_install="btop gh imagemagick rbenv ruby-build tmux iperf3 zsh oh-my-posh gs 
              git git-flow nvim azure-cli openssl kubectl typst thonny k9s uv stern nvm lazygit difftastic tpm"
 
 # Generate symlinks for files
-for i in gitconfig gitmessage gitignore tmux.conf prettierrc zsh_secrets; do
+for i in gitconfig gitignore gitmessage tmux.conf zshrc zsh_secrets; do
   if [ ! -f $HOME/.$i ]; then
     ln -s $HOME/dotfiles/$i $HOME/.$i
   else

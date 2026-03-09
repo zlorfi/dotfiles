@@ -95,10 +95,8 @@ function prompt_aks_cluster() {
 # Only set aliases in interactive shells
 if [[ $- == *i* ]]; then
   # Directory shortcuts
-  alias wgo='cd ~/Documents/workspace_go/src'
   alias wtm='cd ~/Documents/workspace_tm'
   alias wp='cd ~/Documents/workspace_private'
-  alias obc='cd ~/Documents/workspace_tm/obc'
   alias cloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 
   # Git shortcuts
