@@ -4,8 +4,7 @@
 _shell="/opt/homebrew/bin/zsh"
 # _shell="/opt/homebrew/bin/fish"
 _homebrew=$(which brew)
-_to_install="btop gh imagemagick rbenv ruby-build tmux iperf3 zsh oh-my-posh gs tectonic tree-sitter ripgrep\
-             git git-flow nvim azure-cli openssl kubectl typst thonny k9s uv stern nvm lazygit difftastic tpm"
+_to_install="azure-cli btop difftastic gh git git-flow gs imagemagick iperf3 k9s kubectl lazygit mactop nvim nvm oh-my-posh openssl rbenv ripgrep ruby-build stern tectonic thonny tmux tpm tree-sitter typst uv zsh"
 
 # Generate symlinks for files
 for i in gitconfig gitignore gitmessage tmux.conf zshrc zsh_secrets; do
