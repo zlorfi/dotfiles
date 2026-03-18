@@ -18,3 +18,5 @@ config/nvim/tree-sitter-*.tar.gz
 zsh_secrets
 config/cagent/*
 config/jj/repos/*
+/config/darktable
+/config/mole
