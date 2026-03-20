@@ -1,8 +1,8 @@
 {
   "agent_servers": {
     "opencode": {
-      "type": "registry"
-    }
+      "type": "registry",
+    },
   },
   "disable_ai": false,
   "edit_predictions": { "provider": "none" },
@@ -20,13 +20,13 @@
     "default_profile": "write",
     "default_model": {
       "provider": "LM_Studio",
-      "model": "qwen/qwen3.5-9b"
+      "model": "qwen/qwen3.5-9b",
     },
     "commit_message_model": {
       "provider": "openai_compatible.LM_Studio",
-      "model": "qwen/qwen3.5-9b"
+      "model": "qwen/qwen3.5-9b",
     },
-    "model_parameters": []
+    "model_parameters": [],
   },
   // https://zed.dev/docs/ai/llm-providers
   "language_models": {
@@ -43,8 +43,8 @@
               "tools": true,
               "images": true,
               "parallel_tool_calls": false,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "claude-sonnet-4-5",
@@ -55,8 +55,8 @@
               "tools": true,
               "images": true,
               "parallel_tool_calls": false,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "gpt-5-nano",
@@ -67,8 +67,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": false,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "gpt-4.1-nano",
@@ -79,10 +79,10 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": false,
-              "prompt_cache_key": true
-            }
-          }
-        ]
+              "prompt_cache_key": true,
+            },
+          },
+        ],
       },
       "LM_Studio": {
         "api_url": "http://192.168.10.64:1234/v1",
@@ -96,21 +96,33 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
-          }
-        ]
-      }
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "qwen/qwen3.5-35b-a3b",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+        ],
+      },
     },
     "openai": {
       "available_models": [
         {
           "display_name": "gpt-4.1-nano",
           "name": "gpt-4.1-nano",
-          "max_tokens": 128000
-        }
-      ]
-    }
+          "max_tokens": 128000,
+        },
+      ],
+    },
   },
   "base_keymap": "VSCode",
   "auto_indent_on_paste": true,
@@ -124,7 +136,7 @@
       "env": {},
       "enabled": false,
       "command": "docker",
-      "args": ["mcp", "gateway", "run"]
-    }
-  }
+      "args": ["mcp", "gateway", "run"],
+    },
+  },
 }
