@@ -17,17 +17,11 @@
     "code-reviewer": {
       "description": "Expert code reviewer who provides constructive, actionable feedback focused on correctness, maintainability, security, and performance — not style preferences."
     },
-    "": {
-      "description": ""
+    "engineering-backend-architect": {
+      "description": "Senior backend architect specializing in scalable system design, database architecture, API development, and cloud infrastructure. Builds robust, secure, performant server-side applications and microservices"
     },
-    "": {
-      "description": ""
-    },
-    "": {
-      "description": ""
-    },
-    "": {
-      "description": ""
+    "engineering-frontend-developer": {
+      "description": "Expert frontend developer specializing in modern web technologies, React/Vue/Angular frameworks, UI implementation, and performance optimization"
     }
   },
   "provider": {
