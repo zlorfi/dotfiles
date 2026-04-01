@@ -2,7 +2,12 @@
   "mcp": {
     "MCP_DOCKER": {
       "type": "local",
-      "command": ["docker", "mcp", "gateway", "run"],
+      "command": [
+        "docker",
+        "mcp",
+        "gateway",
+        "run"
+      ],
       "enabled": true
     }
   },
@@ -42,5 +47,22 @@
         }
       }
     }
+  },
+  "share": "disabled",
+  "autoupdate": "notify",
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "git *": "allow",
+      "npm *": "allow",
+      "rm *": "deny",
+      "grep *": "allow"
+    },
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    },
   }
 }
