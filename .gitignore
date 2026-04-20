@@ -20,3 +20,5 @@ config/cagent/*
 config/jj/repos/*
 /config/darktable
 /config/mole
+config/opencode/package-lock.json
+config/television/config.toml

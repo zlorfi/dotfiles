@@ -1,7 +1,7 @@
 auto-update = check
 background-blur-radius = 20
 clipboard-paste-protection = true
-font-family = SauceCodePro NFM
+font-family = Jetbrains Mono
 font-size = 19
 keybind = global:super+enter=toggle_quick_terminal
 macos-titlebar-proxy-icon = hidden

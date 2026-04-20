@@ -1,59 +1,60 @@
 {
+  "buffer_font_family": "JetBrains Mono",
+  "ui_font_family": "JetBrains Mono",
   "agent_servers": {
     "OpenCode": {
+      "type": "custom",
       "command": "opencode",
-      "args": [
-        "acp"
-      ]
-    }
+      "args": ["acp"],
+    },
   },
   "disable_ai": false,
   "edit_predictions": {
-    "provider": "none"
+    "provider": "none",
   },
   "git_panel": {
     "status_style": "icon",
-    "default_width": 360
+    "default_width": 360,
   },
   "tabs": {
-    "git_status": false
+    "git_status": false,
   },
   "vim_mode": true,
   "title_bar": {
-    "show_sign_in": false
+    "show_sign_in": false,
   },
   "outline_panel": {
-    "button": false
+    "button": false,
   },
   "collaboration_panel": {
-    "button": false
+    "button": false,
   },
   "notification_panel": {
-    "button": false
+    "button": false,
   },
   "agent": {
     "favorite_models": [
       {
         "provider": "LM_Studio",
         "model": "qwen/qwen3.5-9b",
-        "enable_thinking": false
-      }
+        "enable_thinking": false,
+      },
     ],
     "single_file_review": true,
     "enable_feedback": false,
     "tool_permissions": {
-      "default": "allow"
+      "default": "allow",
     },
     "default_profile": "write",
     "default_model": {
       "provider": "LM_Studio",
-      "model": "qwen/qwen3.5-9b"
+      "model": "qwen/qwen3.6-35b-a3b",
     },
     "commit_message_model": {
       "provider": "openai_compatible.LM_Studio",
-      "model": "qwen/qwen3.5-9b"
+      "model": "nvidia/nemotron-3-nano-4b",
     },
-    "model_parameters": []
+    "model_parameters": [],
   },
   "language_models": {
     "openai_compatible": {
@@ -69,8 +70,8 @@
               "tools": true,
               "images": true,
               "parallel_tool_calls": false,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "claude-sonnet-4-5",
@@ -81,8 +82,8 @@
               "tools": true,
               "images": true,
               "parallel_tool_calls": false,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "gpt-5-nano",
@@ -93,8 +94,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": false,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "gpt-4.1-nano",
@@ -105,16 +106,16 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": false,
-              "prompt_cache_key": true
-            }
-          }
-        ]
+              "prompt_cache_key": true,
+            },
+          },
+        ],
       },
       "LM_Studio": {
         "api_url": "http://192.168.10.64:1234/v1",
         "available_models": [
           {
-            "name": "qwen/qwen3.5-9b",
+            "name": "qwen/qwen3.6-35b-a3b",
             "max_tokens": 200000,
             "max_output_tokens": 32000,
             "max_completion_tokens": 200000,
@@ -122,11 +123,11 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
-            "name": "qwen/qwen3.5-35b-a3b",
+            "name": "google/gemma-4-26b-a4b",
             "max_tokens": 200000,
             "max_output_tokens": 32000,
             "max_completion_tokens": 200000,
@@ -134,43 +135,51 @@
               "tools": true,
               "images": true,
               "parallel_tool_calls": true,
-              "prompt_cache_key": false
-            }
-          }
-        ]
-      }
+              "prompt_cache_key": false,
+            },
+          },
+          {
+            "name": "nvidia/nemotron-3-nano-4b",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+            },
+          },
+        ],
+      },
     },
     "openai": {
       "available_models": [
         {
           "display_name": "gpt-4.1-nano",
           "name": "gpt-4.1-nano",
-          "max_tokens": 128000
-        }
-      ]
-    }
+          "max_tokens": 128000,
+        },
+      ],
+    },
   },
   "base_keymap": "VSCode",
   "auto_indent_on_paste": true,
   "tab_size": 2,
   "icon_theme": "Zed (Default)",
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "ui_font_size": 16.0,
+  "buffer_font_size": 16.0,
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "One Dark",
   },
   "context_servers": {
     "MCP_DOCKER": {
       "env": {},
       "enabled": false,
       "command": "docker",
-      "args": [
-        "mcp",
-        "gateway",
-        "run"
-      ]
-    }
-  }
+      "args": ["mcp", "gateway", "run"],
+    },
+  },
 }
