@@ -29,14 +29,11 @@
   "collaboration_panel": {
     "button": false,
   },
-  "notification_panel": {
-    "button": false,
-  },
   "agent": {
     "favorite_models": [
       {
         "provider": "LM_Studio",
-        "model": "qwen/qwen3.5-9b",
+        "model": "qwen/qwen3.6-35b-a3b",
         "enable_thinking": false,
       },
     ],
@@ -48,7 +45,7 @@
     "default_profile": "write",
     "default_model": {
       "provider": "LM_Studio",
-      "model": "qwen/qwen3.6-35b-a3b",
+      "model": "nvidia/nemotron-3-nano-4b",
     },
     "commit_message_model": {
       "provider": "openai_compatible.LM_Studio",
